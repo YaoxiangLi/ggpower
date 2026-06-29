@@ -1,0 +1,70 @@
+# Scenario Guide
+
+Use this guide to pick a module and test for your study design.
+
+## Implemented scenarios (48 tests)
+
+| Module    | Tests |
+|:----------|------:|
+| biomarker |     7 |
+| clinical  |    11 |
+| workspace |    30 |
+
+### Power Workspace (30 tests)
+
+Classical families: t, F, chi-square, exact proportions, z
+correlations/GLM, Wilcoxon rank tests.
+
+### Biomarker Discovery (7 tests)
+
+ROC/AUC, diagnostic accuracy, log-rank, Cox, FDR screening, differential
+expression.
+
+### Clinical Trials (11 tests)
+
+Superiority, NI, equivalence (TOST), Simon two-stage, cluster RCT,
+multi-arm ANOVA, Poisson counts, survival.
+
+## Decision table
+
+| Study question | Module | Example test |
+|----|----|----|
+| Two-group mean difference | Power Workspace or Clinical | `t_two_sample`, `rct_superiority_continuous` |
+| Paired / pre-post | Power Workspace | `t_paired` |
+| One-way ANOVA | Power Workspace or Clinical | `f_anova_one_way`, `multi_arm_superiority` |
+| Multiple regression $`R^2`$ | Power Workspace | `f_mreg_omnibus` |
+| Two proportions (Fisher) | Power Workspace or Clinical | `exact_fisher`, `rct_superiority_binary` |
+| McNemar paired proportions | Power Workspace | `exact_mcnemar` |
+| Correlation difference | Power Workspace | `z_corr_independent` |
+| Logistic / Poisson GLM | Power Workspace or Clinical | `z_logistic`, `count_endpoint_poisson` |
+| Biomarker AUC | Biomarker | `roc_auc_one` |
+| Diagnostic sens/spec | Biomarker | `diagnostic_acc` |
+| Survival / HR | Biomarker or Clinical | `cox_regression`, `survival_pmu` |
+| Non-inferiority trial | Clinical | `rct_noninferiority_continuous` |
+| Bioequivalence (TOST) | Clinical | `rct_equivalence_continuous` |
+| Oncology Phase II Simon | Clinical | `simon_two_stage` |
+| Cluster RCT | Clinical | `cluster_rct` |
+| Omics screening + FDR | Biomarker | `discovery_fdr` |
+
+## Not yet implemented
+
+Document for planning only — use external tools or custom simulation:
+
+- Group sequential / interim analyses
+- Crossover or repeated-measures RCT
+- Dunnett pairwise multi-arm comparisons
+- Paired / correlated ROC comparison
+- Partial AUC, NPV/PPV as primary endpoints
+- Time-varying accrual and dropout in survival
+- Bayesian assurance
+- Simon optimal design search (minimax / optimal)
+
+## Related
+
+- [Choosing a power
+  analysis](https://yaoxiangli.github.io/ggpower/articles/choosing-a-power-analysis.md)
+- [Support
+  matrix](https://yaoxiangli.github.io/ggpower/articles/support-matrix.md)
+- [Formula
+  reference](https://yaoxiangli.github.io/ggpower/articles/formula-reference.html)
+  (pkgdown only)

@@ -1,0 +1,225 @@
+# ggpower
+
+[![R-CMD-check](https://github.com/YaoxiangLi/ggpower/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/YaoxiangLi/ggpower/actions/workflows/R-CMD-check.yaml)
+
+Documentation: <https://yaoxiangli.github.io/ggpower/>
+
+`ggpower` is an R package and Shiny application for statistical power
+analysis. It provides a scriptable API through
+[`power_compute()`](https://yaoxiangli.github.io/ggpower/reference/power_compute.md)
+and a wide-screen GUI with six modules:
+
+1.  Choose a test family and statistical test.
+2.  Choose a power-analysis type.
+3.  Enter input parameters.
+4.  Calculate output parameters.
+5.  Inspect distribution plots, X-Y power plots, and protocol history.
+
+## Supported Analysis Modes
+
+- A priori: compute required sample size.
+- Compromise: compute alpha and beta from beta / alpha.
+- Criterion: compute alpha for a target power.
+- Post hoc: compute achieved power.
+- Sensitivity: compute the effect size required for target power.
+
+## Supported Test Families
+
+- t tests: one-sample, paired, two independent means, point-biserial,
+  generic t.
+- F tests: one-way ANOVA, special ANOVA effects, multiple-regression
+  omnibus, multiple-regression R2 increase, two variances.
+- Chi-square tests: variance, goodness-of-fit, contingency tables.
+- Exact/proportion tests: binomial, one proportion, sign test,
+  McNemar-style discordant-pair binomial planning, Fisher-style
+  two-proportion planning.
+- z tests: independent correlations, logistic regression, Poisson
+  regression.
+- Nonparametric tests: Wilcoxon signed-rank and Wilcoxon-Mann-Whitney
+  using asymptotic relative efficiency planning.
+- Biomarker: ROC/AUC, diagnostic accuracy, survival, Cox, FDR screening.
+- Clinical: superiority, non-inferiority, equivalence, Simon two-stage,
+  cluster RCT.
+
+Some advanced procedures use documented approximations. The result
+object includes method notes so these cases are visible in the GUI and
+protocol. See the [approximation
+catalog](https://yaoxiangli.github.io/ggpower/articles/approximation-catalog.html).
+
+## Examples
+
+``` r
+power_compute(
+  "t_one_sample",
+  "a_priori",
+  d = 0.625,
+  alpha = 0.05,
+  power = 0.95,
+  tails = "one"
+)
+
+power_compute(
+  "f_mreg_omnibus",
+  "post_hoc",
+  f2 = 0.1111111,
+  alpha = 0.05,
+  total_n = 95,
+  predictors = 5
+)
+```
+
+Run the app with:
+
+``` r
+ggpower::run_app()
+```
+
+## Validation
+
+The test suite includes golden reference examples, solver tests for the
+five analysis modes, registry checks, and Shiny module smoke tests.
+
+# Package index
+
+## Compute API
+
+- [`power_compute()`](https://yaoxiangli.github.io/ggpower/reference/power_compute.md)
+  : Compute statistical power analyses
+- [`ggpower_tests()`](https://yaoxiangli.github.io/ggpower/reference/ggpower_tests.md)
+  : List supported statistical power tests
+- [`ggpower_result()`](https://yaoxiangli.github.io/ggpower/reference/ggpower_result.md)
+  : Create a ggpower result object
+- [`format_result_html()`](https://yaoxiangli.github.io/ggpower/reference/format_result_html.md)
+  : Format a ggpower result as structured HTML for Shiny UI
+
+## t-test Helpers
+
+- [`power_t_one_sample()`](https://yaoxiangli.github.io/ggpower/reference/power_t_one_sample.md)
+  : Compute Power for a One-Sample t-Test
+- [`power_t_two_sample()`](https://yaoxiangli.github.io/ggpower/reference/power_t_two_sample.md)
+  : Compute Power for a Two-Sample t-Test (Equal Sample Sizes)
+- [`power_t_paired()`](https://yaoxiangli.github.io/ggpower/reference/power_t_paired.md)
+  : Compute power for a paired-samples t-test
+- [`ggpower_t_one_sample()`](https://yaoxiangli.github.io/ggpower/reference/ggpower_t_one_sample.md)
+  : Plot Power Curve for a One-Sample t-Test
+- [`ggpower_ttest()`](https://yaoxiangli.github.io/ggpower/reference/ggpower_ttest.md)
+  : Plot Power Curve for a Two-Sample t-Test
+
+## Effect Sizes
+
+- [`effect_size_d()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
+  [`effect_size_f()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
+  [`effect_size_f2()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
+  [`effect_size_f2_increase()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
+  [`effect_size_h()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
+  [`effect_size_q()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
+  [`effect_size_w()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
+  [`eta2_from_f()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
+  [`odds_ratio_from_probs()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
+  [`r2_from_f2()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
+  : Effect-size helper functions
+
+## Publication Figures
+
+- [`theme_ggpower()`](https://yaoxiangli.github.io/ggpower/reference/theme_ggpower.md)
+  : Publication-ready ggpower theme
+- [`plot_power_curve()`](https://yaoxiangli.github.io/ggpower/reference/plot_power_curve.md)
+  : Plot a power curve
+- [`plot_distribution()`](https://yaoxiangli.github.io/ggpower/reference/plot_distribution.md)
+  : Plot H0 and H1 distributions
+- [`save_power_plot()`](https://yaoxiangli.github.io/ggpower/reference/save_power_plot.md)
+  [`save_distribution_plot()`](https://yaoxiangli.github.io/ggpower/reference/save_power_plot.md)
+  : Save a ggpower plot
+
+## Calculator
+
+- [`ggpower_calculator()`](https://yaoxiangli.github.io/ggpower/reference/ggpower_calculator.md)
+  : Evaluate a ggpower calculator script
+
+## App
+
+- [`run_app()`](https://yaoxiangli.github.io/ggpower/reference/run_app.md)
+  : Run the Shiny Application
+
+# Articles
+
+### Getting Started
+
+- [Choosing a Power
+  Analysis](https://yaoxiangli.github.io/ggpower/articles/choosing-a-power-analysis.md):
+- [Getting Started with the
+  GUI](https://yaoxiangli.github.io/ggpower/articles/getting-started-gui.md):
+- [Choosing the Right
+  Module](https://yaoxiangli.github.io/ggpower/articles/choosing-the-right-module.md):
+- [Scenario
+  Guide](https://yaoxiangli.github.io/ggpower/articles/scenario-guide.md):
+- [Reference
+  Validation](https://yaoxiangli.github.io/ggpower/articles/reference-validation.md):
+
+### Statistical Test Families
+
+- [t Tests](https://yaoxiangli.github.io/ggpower/articles/t-tests.md):
+- [Workspace Test
+  Families](https://yaoxiangli.github.io/ggpower/articles/workspace-test-families.md):
+- [ANOVA and
+  Regression](https://yaoxiangli.github.io/ggpower/articles/anova-regression.md):
+- [Exact and Proportion
+  Tests](https://yaoxiangli.github.io/ggpower/articles/exact-and-proportions.md):
+- [Correlation and z
+  Tests](https://yaoxiangli.github.io/ggpower/articles/correlation-and-z-tests.md):
+- [Nonparametric
+  Tests](https://yaoxiangli.github.io/ggpower/articles/nonparametric-tests.md):
+- [Logistic and Poisson
+  Regression](https://yaoxiangli.github.io/ggpower/articles/logistic-poisson.md):
+
+### Biomarker Discovery
+
+- [Biomarker
+  Endpoints](https://yaoxiangli.github.io/ggpower/articles/biomarker-endpoints.md):
+- [Biomarker Differential
+  Expression](https://yaoxiangli.github.io/ggpower/articles/biomarker-differential-expression.md):
+- [Biomarker ROC and AUC
+  Power](https://yaoxiangli.github.io/ggpower/articles/biomarker-roc-auc.md):
+- [Biomarker Diagnostic
+  Accuracy](https://yaoxiangli.github.io/ggpower/articles/biomarker-diagnostic-accuracy.md):
+- [Biomarker
+  Survival](https://yaoxiangli.github.io/ggpower/articles/biomarker-survival.md):
+- [Cox Prognostic
+  Models](https://yaoxiangli.github.io/ggpower/articles/biomarker-cox-prognostic.md):
+- [Multiplicity and
+  FDR](https://yaoxiangli.github.io/ggpower/articles/biomarker-multiplicity-fdr.md):
+
+### Clinical Trials
+
+- [Clinical
+  Trials](https://yaoxiangli.github.io/ggpower/articles/clinical-trials.md):
+- [Phase III Superiority
+  Trials](https://yaoxiangli.github.io/ggpower/articles/pharma-phase-iii-superiority.md):
+- [Non-Inferiority
+  Trials](https://yaoxiangli.github.io/ggpower/articles/pharma-non-inferiority.md):
+- [Equivalence Trials
+  (TOST)](https://yaoxiangli.github.io/ggpower/articles/pharma-equivalence-tost.md):
+- [Simon Two-Stage
+  Design](https://yaoxiangli.github.io/ggpower/articles/pharma-simon-two-stage.md):
+- [Cluster
+  RCT](https://yaoxiangli.github.io/ggpower/articles/pharma-cluster-rct.md):
+- [Survival
+  Endpoints](https://yaoxiangli.github.io/ggpower/articles/pharma-survival-endpoints.md):
+- [Binary and Count
+  Endpoints](https://yaoxiangli.github.io/ggpower/articles/pharma-binary-and-count-endpoints.md):
+
+### Reference
+
+- [Support
+  Matrix](https://yaoxiangli.github.io/ggpower/articles/support-matrix.md):
+- [Analysis
+  Modes](https://yaoxiangli.github.io/ggpower/articles/analysis-modes.md):
+- [Formula
+  Reference](https://yaoxiangli.github.io/ggpower/articles/formula-reference.md):
+- [Effect Size
+  Conversions](https://yaoxiangli.github.io/ggpower/articles/effect-size-conversions.md):
+- [Calculator](https://yaoxiangli.github.io/ggpower/articles/calculator.md):
+- [Approximation
+  Catalog](https://yaoxiangli.github.io/ggpower/articles/approximation-catalog.md):
+- [Publication-Ready
+  Figures](https://yaoxiangli.github.io/ggpower/articles/publication-figures.md):

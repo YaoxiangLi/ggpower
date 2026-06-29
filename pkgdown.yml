@@ -1,0 +1,42 @@
+pandoc: 3.6.3
+pkgdown: 2.2.0
+pkgdown_sha: ~
+articles:
+  analysis-modes: analysis-modes.html
+  anova-regression: anova-regression.html
+  approximation-catalog: approximation-catalog.html
+  biomarker-cox-prognostic: biomarker-cox-prognostic.html
+  biomarker-diagnostic-accuracy: biomarker-diagnostic-accuracy.html
+  biomarker-differential-expression: biomarker-differential-expression.html
+  biomarker-endpoints: biomarker-endpoints.html
+  biomarker-multiplicity-fdr: biomarker-multiplicity-fdr.html
+  biomarker-roc-auc: biomarker-roc-auc.html
+  biomarker-survival: biomarker-survival.html
+  calculator: calculator.html
+  choosing-a-power-analysis: choosing-a-power-analysis.html
+  choosing-the-right-module: choosing-the-right-module.html
+  clinical-trials: clinical-trials.html
+  correlation-and-z-tests: correlation-and-z-tests.html
+  effect-size-conversions: effect-size-conversions.html
+  exact-and-proportions: exact-and-proportions.html
+  formula-reference: formula-reference.html
+  getting-started-gui: getting-started-gui.html
+  logistic-poisson: logistic-poisson.html
+  nonparametric-tests: nonparametric-tests.html
+  pharma-binary-and-count-endpoints: pharma-binary-and-count-endpoints.html
+  pharma-cluster-rct: pharma-cluster-rct.html
+  pharma-equivalence-tost: pharma-equivalence-tost.html
+  pharma-non-inferiority: pharma-non-inferiority.html
+  pharma-phase-iii-superiority: pharma-phase-iii-superiority.html
+  pharma-simon-two-stage: pharma-simon-two-stage.html
+  pharma-survival-endpoints: pharma-survival-endpoints.html
+  publication-figures: publication-figures.html
+  reference-validation: reference-validation.html
+  scenario-guide: scenario-guide.html
+  support-matrix: support-matrix.html
+  t-tests: t-tests.html
+  workspace-test-families: workspace-test-families.html
+last_built: 2026-06-29T18:31Z
+urls:
+  reference: https://yaoxiangli.github.io/ggpower/reference
+  article: https://yaoxiangli.github.io/ggpower/articles
