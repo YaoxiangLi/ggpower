@@ -13,6 +13,7 @@ catalog](https://yaoxiangli.github.io/ggpower/articles/approximation-catalog.md)
 ## Wilcoxon Signed-Rank
 
 ``` r
+
 power_compute("wilcoxon_signed", "post_hoc", d = 0.5, n = 40,
               alpha = 0.05, are = 3 / pi)
 #> ggpower result
@@ -41,6 +42,7 @@ power_compute("wilcoxon_signed", "post_hoc", d = 0.5, n = 40,
 ## Wilcoxon-Mann-Whitney
 
 ``` r
+
 power_compute("wilcoxon_mann_whitney", "post_hoc", d = 0.5,
               n1 = 30, n2 = 30, alpha = 0.05, are = 3 / pi)
 #> ggpower result

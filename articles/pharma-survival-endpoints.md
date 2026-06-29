@@ -11,6 +11,7 @@ reference](https://yaoxiangli.github.io/ggpower/articles/formula-reference.md).
 ## Clinical survival module
 
 ``` r
+
 power_compute("survival_pmu", "a_priori", hazard_ratio = 0.65,
               event_rate = 0.5, alpha = 0.05, power = 0.8)
 #> ggpower result
@@ -41,6 +42,7 @@ power_compute("survival_pmu", "a_priori", hazard_ratio = 0.65,
 ## Post hoc
 
 ``` r
+
 power_compute("survival_pmu", "post_hoc", hazard_ratio = 0.7,
               total_n = 300, event_rate = 0.45, alpha = 0.05)
 #> ggpower result

@@ -7,7 +7,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/YaoxiangLi/ggpower/blob/HEAD/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/YaoxiangLi/ggpower/blob/main/DESCRIPTION)
 
 Li Y (2026). *ggpower: Publication-Ready Power Analysis and
 Visualization*. R package version 0.1.1,

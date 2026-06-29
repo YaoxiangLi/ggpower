@@ -10,6 +10,7 @@ and two-sample AUC comparison.
 ## One-sample AUC vs null
 
 ``` r
+
 power_compute(
   "roc_auc_one",
   analysis = "a_priori",
@@ -50,6 +51,7 @@ power_compute(
 ## Compare two biomarkers
 
 ``` r
+
 power_compute(
   "roc_auc_two",
   analysis = "post_hoc",

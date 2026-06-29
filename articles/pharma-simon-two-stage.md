@@ -12,6 +12,7 @@ $`p_1`$ (target).
 ## Post hoc power
 
 ``` r
+
 power_compute("simon_two_stage", "post_hoc", p0 = 0.2, p1 = 0.4,
               r1 = 4, r = 10, n1 = 20, n2 = 20, alpha = 0.05)
 #> ggpower result
@@ -43,6 +44,7 @@ power_compute("simon_two_stage", "post_hoc", p0 = 0.2, p1 = 0.4,
 ## Sensitivity — detectable response rate
 
 ``` r
+
 power_compute("simon_two_stage", "sensitivity", p0 = 0.2, r1 = 4, r = 10,
               n1 = 20, n2 = 20, alpha = 0.05, power = 0.8)
 #> ggpower result

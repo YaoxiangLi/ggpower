@@ -102,7 +102,7 @@
       <h1>Formula Reference</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/YaoxiangLi/ggpower/blob/HEAD/vignettes/formula-reference.Rmd" class="external-link"><code>vignettes/formula-reference.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/YaoxiangLi/ggpower/blob/main/vignettes/formula-reference.Rmd" class="external-link"><code>vignettes/formula-reference.Rmd</code></a></small>
       <div class="d-none name"><code>formula-reference.Rmd</code></div>
     </div>
 
@@ -113,9 +113,9 @@ vignettes for worked examples.</p>
 <div class="section level2">
 <h2 id="general-power">General power<a class="anchor" aria-label="anchor" href="#general-power"></a>
 </h2>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Power</mtext><mo>=</mo><mn>1</mn><mo>−</mo><mi>β</mi><mo>=</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mtext mathvariant="normal">reject </mtext><mspace width="0.333em"></mspace></mrow><msub><mi>H</mi><mn>0</mn></msub><mo>∣</mo><msub><mi>H</mi><mn>1</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\text{Power} = 1 - \beta = P(\text{reject } H_0 \mid H_1)</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Power</mtext><mo>=</mo><mn>1</mn><mo>−</mo><mi>β</mi><mo>=</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mrow><mtext mathvariant="normal">reject </mtext><mspace width="0.333em"></mspace></mrow><msub><mi>H</mi><mn>0</mn></msub><mo>∣</mo><msub><mi>H</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Power} = 1 - \beta = P(\text{reject } H_0 \mid H_1)</annotation></semantics></math></p>
 <p>For many tests, power is computed from a noncentral distribution:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Power</mtext><mo>=</mo><mn>1</mn><mo>−</mo><msub><mi>F</mi><msub><mi>H</mi><mn>1</mn></msub></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>c</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mtext mathvariant="normal">(one/two-tailed adjustment)</mtext></mrow><annotation encoding="application/x-tex">\text{Power} = 1 - F_{H_1}(c) + \text{(one/two-tailed adjustment)}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Power</mtext><mo>=</mo><mn>1</mn><mo>−</mo><msub><mi>F</mi><msub><mi>H</mi><mn>1</mn></msub></msub><mo stretchy="false" form="prefix">(</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mtext mathvariant="normal">(one/two-tailed adjustment)</mtext></mrow><annotation encoding="application/x-tex">\text{Power} = 1 - F_{H_1}(c) + \text{(one/two-tailed adjustment)}</annotation></semantics></math></p>
 <p>where
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>
 is the critical value under
@@ -155,7 +155,7 @@ to
 <div class="section level3">
 <h3 id="linear-regression-slope">Linear regression slope<a class="anchor" aria-label="anchor" href="#linear-regression-slope"></a>
 </h3>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>=</mo><mfrac><mrow><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>β</mi><mn>1</mn></msub><mo>−</mo><msub><mi>β</mi><mn>0</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><msqrt><mi>n</mi></msqrt></mrow><msub><mi>σ</mi><mtext mathvariant="normal">residual</mtext></msub></mfrac><mo>⋅</mo><msqrt><msubsup><mi>σ</mi><mi>x</mi><mn>2</mn></msubsup></msqrt></mrow><annotation encoding="application/x-tex">\delta = \frac{(\beta_1 - \beta_0)\sqrt{n}}{\sigma_{\text{residual}}} \cdot \sqrt{\sigma_x^2}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>β</mi><mn>1</mn></msub><mo>−</mo><msub><mi>β</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo><msqrt><mi>n</mi></msqrt></mrow><msub><mi>σ</mi><mtext mathvariant="normal">residual</mtext></msub></mfrac><mo>⋅</mo><msqrt><msubsup><mi>σ</mi><mi>x</mi><mn>2</mn></msubsup></msqrt></mrow><annotation encoding="application/x-tex">\delta = \frac{(\beta_1 - \beta_0)\sqrt{n}}{\sigma_{\text{residual}}} \cdot \sqrt{\sigma_x^2}</annotation></semantics></math></p>
 </div>
 <div class="section level3">
 <h3 id="generic-t-direct-ncp">Generic t (direct NCP)<a class="anchor" aria-label="anchor" href="#generic-t-direct-ncp"></a>
@@ -181,7 +181,7 @@ directly.</p>
 <div class="section level3">
 <h3 id="noncentrality-omnibus">Noncentrality (omnibus)<a class="anchor" aria-label="anchor" href="#noncentrality-omnibus"></a>
 </h3>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><msup><mi>f</mi><mn>2</mn></msup><mo>⋅</mo><mi>N</mi><mspace width="1.0em"></mspace><mtext mathvariant="normal">or</mtext><mspace width="1.0em"></mspace><mi>λ</mi><mo>=</mo><msup><mi>f</mi><mn>2</mn></msup><mo>⋅</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>N</mi><mo>−</mo><mi>k</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\lambda = f^2 \cdot N \quad \text{or} \quad \lambda = f^2 \cdot (N - k - 1)</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><msup><mi>f</mi><mn>2</mn></msup><mo>⋅</mo><mi>N</mi><mspace width="1.0em"></mspace><mtext mathvariant="normal">or</mtext><mspace width="1.0em"></mspace><mi>λ</mi><mo>=</mo><msup><mi>f</mi><mn>2</mn></msup><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mi>N</mi><mo>−</mo><mi>k</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\lambda = f^2 \cdot N \quad \text{or} \quad \lambda = f^2 \cdot (N - k - 1)</annotation></semantics></math></p>
 <p>depending on the test (see registry <code>method</code> field).</p>
 </div>
 <div class="section level3">
@@ -226,7 +226,7 @@ with
 <div class="section level3">
 <h3 id="cohens-w-gof-contingency">Cohen’s w (Gof / contingency)<a class="anchor" aria-label="anchor" href="#cohens-w-gof-contingency"></a>
 </h3>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><msqrt><mrow><munder><mo>∑</mo><mi>i</mi></munder><mfrac><msup><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>p</mi><mrow><mn>1</mn><mi>i</mi></mrow></msub><mo>−</mo><msub><mi>p</mi><mrow><mn>0</mn><mi>i</mi></mrow></msub><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><msub><mi>p</mi><mrow><mn>0</mn><mi>i</mi></mrow></msub></mfrac></mrow></msqrt></mrow><annotation encoding="application/x-tex">w = \sqrt{\sum_i \frac{(p_{1i} - p_{0i})^2}{p_{0i}}}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><msqrt><mrow><munder><mo>∑</mo><mi>i</mi></munder><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>p</mi><mrow><mn>1</mn><mi>i</mi></mrow></msub><mo>−</mo><msub><mi>p</mi><mrow><mn>0</mn><mi>i</mi></mrow></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><msub><mi>p</mi><mrow><mn>0</mn><mi>i</mi></mrow></msub></mfrac></mrow></msqrt></mrow><annotation encoding="application/x-tex">w = \sqrt{\sum_i \frac{(p_{1i} - p_{0i})^2}{p_{0i}}}</annotation></semantics></math></p>
 <p>Noncentrality:
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mi>N</mi><msup><mi>w</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\lambda = N w^2</annotation></semantics></math>.</p>
 <p><strong>Vignette:</strong> <a href="exact-and-proportions.html">Exact
@@ -270,7 +270,7 @@ and Proportions</a></p>
 <div class="section level3">
 <h3 id="independent-correlations-fisher-z">Independent correlations (Fisher Z)<a class="anchor" aria-label="anchor" href="#independent-correlations-fisher-z"></a>
 </h3>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mtext mathvariant="normal">FisherZ</mtext><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>r</mi><mn>1</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><mtext mathvariant="normal">FisherZ</mtext><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>r</mi><mn>2</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">q = \text{FisherZ}(r_1) - \text{FisherZ}(r_2)</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mtext mathvariant="normal">FisherZ</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>r</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mtext mathvariant="normal">FisherZ</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>r</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">q = \text{FisherZ}(r_1) - \text{FisherZ}(r_2)</annotation></semantics></math></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mi>q</mi><msqrt><mrow><mfrac><mn>1</mn><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>−</mo><mn>3</mn></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>n</mi><mn>2</mn></msub><mo>−</mo><mn>3</mn></mrow></mfrac></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">z = \frac{q}{\sqrt{\frac{1}{n_1-3}+\frac{1}{n_2-3}}}</annotation></semantics></math></p>
 </div>
 <div class="section level3">
@@ -282,12 +282,12 @@ and Proportions</a></p>
 <div class="section level3">
 <h3 id="logistic-regression-wald">Logistic regression (Wald)<a class="anchor" aria-label="anchor" href="#logistic-regression-wald"></a>
 </h3>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><mo>log</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="normal">OR</mtext><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mrow><mtext mathvariant="normal">SE</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mo>log</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="normal">OR</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">z = \frac{\log(\text{OR})}{\text{SE}(\log(\text{OR}))}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><mrow><mi mathvariant="normal">log</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">OR</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mtext mathvariant="normal">SE</mtext><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">log</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">OR</mtext><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">z = \frac{\log(\text{OR})}{\text{SE}(\log(\text{OR}))}</annotation></semantics></math></p>
 </div>
 <div class="section level3">
 <h3 id="poisson-regression-wald">Poisson regression (Wald)<a class="anchor" aria-label="anchor" href="#poisson-regression-wald"></a>
 </h3>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><msub><mi>β</mi><mn>1</mn></msub><mrow><mtext mathvariant="normal">SE</mtext><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>β</mi><mn>1</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">z = \frac{\beta_1}{\text{SE}(\beta_1)}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><msub><mi>β</mi><mn>1</mn></msub><mrow><mtext mathvariant="normal">SE</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>β</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">z = \frac{\beta_1}{\text{SE}(\beta_1)}</annotation></semantics></math></p>
 </div>
 <div class="section level3">
 <h3 id="tetrachoric-approximation">Tetrachoric (approximation)<a class="anchor" aria-label="anchor" href="#tetrachoric-approximation"></a>
@@ -319,30 +319,30 @@ via ARE:</p>
 <div class="section level3">
 <h3 id="roc-auc-hanley-mcneil-one-sample">ROC AUC — Hanley-McNeil (one sample)<a class="anchor" aria-label="anchor" href="#roc-auc-hanley-mcneil-one-sample"></a>
 </h3>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">SE</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msqrt><mfrac><mrow><mi>A</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>n</mi><mn>1</mn></msub><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>Q</mi><mn>1</mn></msub><mo>−</mo><msup><mi>A</mi><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>n</mi><mn>0</mn></msub><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>Q</mi><mn>2</mn></msub><mo>−</mo><msup><mi>A</mi><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mrow><msub><mi>n</mi><mn>1</mn></msub><msub><mi>n</mi><mn>0</mn></msub></mrow></mfrac></msqrt></mrow><annotation encoding="application/x-tex">\text{SE}(A) = \sqrt{\frac{A(1-A) + (n_1-1)(Q_1 - A^2) + (n_0-1)(Q_2 - A^2)}{n_1 n_0}}</annotation></semantics></math></p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><mi>A</mi><mo>−</mo><msub><mi>A</mi><mn>0</mn></msub></mrow><mrow><mtext mathvariant="normal">SE</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">z = \frac{A - A_0}{\text{SE}(A)}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">SE</mtext><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msqrt><mfrac><mrow><mi>A</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>n</mi><mn>1</mn></msub><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>Q</mi><mn>1</mn></msub><mo>−</mo><msup><mi>A</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>n</mi><mn>0</mn></msub><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>Q</mi><mn>2</mn></msub><mo>−</mo><msup><mi>A</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><mrow><msub><mi>n</mi><mn>1</mn></msub><msub><mi>n</mi><mn>0</mn></msub></mrow></mfrac></msqrt></mrow><annotation encoding="application/x-tex">\text{SE}(A) = \sqrt{\frac{A(1-A) + (n_1-1)(Q_1 - A^2) + (n_0-1)(Q_2 - A^2)}{n_1 n_0}}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><mi>A</mi><mo>−</mo><msub><mi>A</mi><mn>0</mn></msub></mrow><mrow><mtext mathvariant="normal">SE</mtext><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">z = \frac{A - A_0}{\text{SE}(A)}</annotation></semantics></math></p>
 </div>
 <div class="section level3">
 <h3 id="two-independent-aucs-delong-style">Two independent AUCs — DeLong-style<a class="anchor" aria-label="anchor" href="#two-independent-aucs-delong-style"></a>
 </h3>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>−</mo><msub><mi>A</mi><mn>2</mn></msub></mrow><msqrt><mrow><mtext mathvariant="normal">Var</mtext><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><mn>1</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mtext mathvariant="normal">Var</mtext><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><mn>2</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">z = \frac{A_1 - A_2}{\sqrt{\text{Var}(A_1) + \text{Var}(A_2)}}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>−</mo><msub><mi>A</mi><mn>2</mn></msub></mrow><msqrt><mrow><mtext mathvariant="normal">Var</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>A</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mtext mathvariant="normal">Var</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>A</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">z = \frac{A_1 - A_2}{\sqrt{\text{Var}(A_1) + \text{Var}(A_2)}}</annotation></semantics></math></p>
 </div>
 <div class="section level3">
 <h3 id="diagnostic-accuracy">Diagnostic accuracy<a class="anchor" aria-label="anchor" href="#diagnostic-accuracy"></a>
 </h3>
 <p>Separate binomial tests for sensitivity and specificity; reported
 power is
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>min</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mtext mathvariant="normal">Power</mtext><mtext mathvariant="normal">sens</mtext></msub><mo>,</mo><msub><mtext mathvariant="normal">Power</mtext><mtext mathvariant="normal">spec</mtext></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\min(\text{Power}_{\text{sens}}, \text{Power}_{\text{spec}})</annotation></semantics></math>.</p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">min</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mtext mathvariant="normal">Power</mtext><mtext mathvariant="normal">sens</mtext></msub><mo>,</mo><msub><mtext mathvariant="normal">Power</mtext><mtext mathvariant="normal">spec</mtext></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\min(\text{Power}_{\text{sens}}, \text{Power}_{\text{spec}})</annotation></semantics></math>.</p>
 </div>
 <div class="section level3">
 <h3 id="log-rank-schoenfeld">Log-rank (Schoenfeld)<a class="anchor" aria-label="anchor" href="#log-rank-schoenfeld"></a>
 </h3>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>≈</mo><mfrac><mrow><mo stretchy="true" form="prefix">|</mo><mo>log</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="normal">HR</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">|</mo></mrow><msqrt><mrow><mn>1</mn><mi>/</mi><mi>D</mi></mrow></msqrt></mfrac><mo>⋅</mo><msqrt><mrow><mi>D</mi><mo>⋅</mo><mi>p</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></msqrt></mrow><annotation encoding="application/x-tex">z \approx \frac{|\log(\text{HR})|}{\sqrt{1/D}} \cdot \sqrt{D \cdot p(1-p)}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>≈</mo><mfrac><mrow><mo stretchy="false" form="prefix">|</mo><mrow><mi mathvariant="normal">log</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">HR</mtext><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">|</mo></mrow><msqrt><mrow><mn>1</mn><mi>/</mi><mi>D</mi></mrow></msqrt></mfrac><mo>⋅</mo><msqrt><mrow><mi>D</mi><mo>⋅</mo><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">z \approx \frac{|\log(\text{HR})|}{\sqrt{1/D}} \cdot \sqrt{D \cdot p(1-p)}</annotation></semantics></math></p>
 </div>
 <div class="section level3">
 <h3 id="cox-regression">Cox regression<a class="anchor" aria-label="anchor" href="#cox-regression"></a>
 </h3>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>≈</mo><mrow><mo stretchy="true" form="prefix">|</mo><mo>log</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="normal">HR</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">|</mo></mrow><msqrt><mi>E</mi></msqrt></mrow><annotation encoding="application/x-tex">z \approx |\log(\text{HR})| \sqrt{E}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>≈</mo><mo stretchy="false" form="prefix">|</mo><mrow><mi mathvariant="normal">log</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">HR</mtext><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">|</mo><msqrt><mi>E</mi></msqrt></mrow><annotation encoding="application/x-tex">z \approx |\log(\text{HR})| \sqrt{E}</annotation></semantics></math></p>
 <p>where
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
 is expected events.</p>
@@ -371,7 +371,7 @@ accuracy</a></p>
 </h3>
 <p>One-sided two-sample
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>:
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>=</mo><mi>d</mi><msqrt><mrow><msub><mi>n</mi><mn>1</mn></msub><msub><mi>n</mi><mn>2</mn></msub><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>n</mi><mn>1</mn></msub><mo>+</mo><msub><mi>n</mi><mn>2</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow></msqrt></mrow><annotation encoding="application/x-tex">\delta = d\sqrt{n_1 n_2/(n_1+n_2)}</annotation></semantics></math>.</p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>=</mo><mi>d</mi><msqrt><mrow><msub><mi>n</mi><mn>1</mn></msub><msub><mi>n</mi><mn>2</mn></msub><mi>/</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>n</mi><mn>1</mn></msub><mo>+</mo><msub><mi>n</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">\delta = d\sqrt{n_1 n_2/(n_1+n_2)}</annotation></semantics></math>.</p>
 </div>
 <div class="section level3">
 <h3 id="superiority-binary">Superiority (binary)<a class="anchor" aria-label="anchor" href="#superiority-binary"></a>
@@ -384,15 +384,15 @@ vs
 <div class="section level3">
 <h3 id="non-inferiority-continuous">Non-inferiority (continuous)<a class="anchor" aria-label="anchor" href="#non-inferiority-continuous"></a>
 </h3>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><msub><mi>μ</mi><mi>T</mi></msub><mo>−</mo><msub><mi>μ</mi><mi>C</mi></msub><mo>≤</mo><mi>−</mi><mi>Δ</mi><mspace width="1.0em"></mspace><mtext mathvariant="normal">vs</mtext><mspace width="1.0em"></mspace><msub><mi>H</mi><mn>1</mn></msub><mo>:</mo><msub><mi>μ</mi><mi>T</mi></msub><mo>−</mo><msub><mi>μ</mi><mi>C</mi></msub><mo>&gt;</mo><mi>−</mi><mi>Δ</mi></mrow><annotation encoding="application/x-tex">H_0: \mu_T - \mu_C \le -\Delta \quad \text{vs} \quad H_1: \mu_T - \mu_C &gt; -\Delta</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><msub><mi>μ</mi><mi>T</mi></msub><mo>−</mo><msub><mi>μ</mi><mi>C</mi></msub><mo>≤</mo><mi>−</mi><mi mathvariant="normal">Δ</mi><mspace width="1.0em"></mspace><mtext mathvariant="normal">vs</mtext><mspace width="1.0em"></mspace><msub><mi>H</mi><mn>1</mn></msub><mo>:</mo><msub><mi>μ</mi><mi>T</mi></msub><mo>−</mo><msub><mi>μ</mi><mi>C</mi></msub><mo>&gt;</mo><mi>−</mi><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">H_0: \mu_T - \mu_C \le -\Delta \quad \text{vs} \quad H_1: \mu_T - \mu_C &gt; -\Delta</annotation></semantics></math></p>
 <p>Shifted mean difference:
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mtext mathvariant="normal">NI</mtext></msub><mo>=</mo><mi>d</mi><mo>+</mo><mi>Δ</mi><mi>/</mi><mi>σ</mi></mrow><annotation encoding="application/x-tex">d_{\text{NI}} = d + \Delta/\sigma</annotation></semantics></math>.</p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mtext mathvariant="normal">NI</mtext></msub><mo>=</mo><mi>d</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>/</mi><mi>σ</mi></mrow><annotation encoding="application/x-tex">d_{\text{NI}} = d + \Delta/\sigma</annotation></semantics></math>.</p>
 </div>
 <div class="section level3">
 <h3 id="non-inferiority-binary">Non-inferiority (binary)<a class="anchor" aria-label="anchor" href="#non-inferiority-binary"></a>
 </h3>
 <p>Normal approximation on
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>T</mi></msub><mo>−</mo><msub><mi>p</mi><mi>C</mi></msub><mo>+</mo><mi>Δ</mi></mrow><annotation encoding="application/x-tex">p_T - p_C + \Delta</annotation></semantics></math>.</p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>T</mi></msub><mo>−</mo><msub><mi>p</mi><mi>C</mi></msub><mo>+</mo><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">p_T - p_C + \Delta</annotation></semantics></math>.</p>
 </div>
 <div class="section level3">
 <h3 id="equivalence-tost">Equivalence — TOST<a class="anchor" aria-label="anchor" href="#equivalence-tost"></a>
@@ -403,7 +403,7 @@ vs
 <div class="section level3">
 <h3 id="simon-two-stage">Simon two-stage<a class="anchor" aria-label="anchor" href="#simon-two-stage"></a>
 </h3>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="normal">success</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munder><mo>∑</mo><mi>k</mi></munder><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="normal">stage 1</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo>⋅</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="normal">stage 2</mtext><mo>∣</mo><mtext mathvariant="normal">stage 1</mtext><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{success}) = \sum_{k} P(\text{stage 1}) \cdot P(\text{stage 2} \mid \text{stage 1})</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">success</mtext><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mo>∑</mo><mi>k</mi></munder><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">stage 1</mtext><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">stage 2</mtext><mo>∣</mo><mtext mathvariant="normal">stage 1</mtext><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(\text{success}) = \sum_{k} P(\text{stage 1}) \cdot P(\text{stage 2} \mid \text{stage 1})</annotation></semantics></math></p>
 <p>under
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>
 and
@@ -413,7 +413,7 @@ response rates.</p>
 <div class="section level3">
 <h3 id="cluster-rct-design-effect">Cluster RCT design effect<a class="anchor" aria-label="anchor" href="#cluster-rct-design-effect"></a>
 </h3>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">DE</mtext><mo>=</mo><mn>1</mn><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>m</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>⋅</mo><mtext mathvariant="normal">ICC</mtext></mrow><annotation encoding="application/x-tex">\text{DE} = 1 + (m - 1) \cdot \text{ICC}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">DE</mtext><mo>=</mo><mn>1</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mtext mathvariant="normal">ICC</mtext></mrow><annotation encoding="application/x-tex">\text{DE} = 1 + (m - 1) \cdot \text{ICC}</annotation></semantics></math></p>
 <p>Effective
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mtext mathvariant="normal">eff</mtext></msub><mo>=</mo><mi>n</mi><mi>/</mi><mtext mathvariant="normal">DE</mtext></mrow><annotation encoding="application/x-tex">n_{\text{eff}} = n / \text{DE}</annotation></semantics></math>;
 then standard two-sample formulas.</p>

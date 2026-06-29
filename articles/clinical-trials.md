@@ -7,6 +7,7 @@ and count endpoints.
 ## Phase III superiority
 
 ``` r
+
 power_compute(
   "rct_superiority_continuous",
   analysis = "post_hoc",
@@ -36,6 +37,7 @@ power_compute(
 ```
 
 ``` r
+
 power_compute(
   "rct_superiority_binary",
   analysis = "a_priori",
@@ -112,6 +114,7 @@ power_compute(
 ```
 
 ``` r
+
 power_compute("multi_arm_superiority", "a_priori", f = 0.25, groups = 3,
               alpha = 0.05, power = 0.8)
 #> ggpower result
@@ -142,6 +145,7 @@ power_compute("multi_arm_superiority", "a_priori", f = 0.25, groups = 3,
 ## Non-inferiority
 
 ``` r
+
 power_compute("rct_noninferiority_continuous", "a_priori", d = 0.1,
               ni_margin = 0.2, alpha = 0.025, power = 0.8, n1 = 100, n2 = 100)
 #> ggpower result
@@ -172,6 +176,7 @@ power_compute("rct_noninferiority_continuous", "a_priori", d = 0.1,
 ```
 
 ``` r
+
 power_compute("rct_noninferiority_binary", "post_hoc", p0 = 0.5, p1 = 0.55,
               ni_margin = 0.1, alpha = 0.025, n1 = 200, n2 = 200)
 #> ggpower result
@@ -201,6 +206,7 @@ power_compute("rct_noninferiority_binary", "post_hoc", p0 = 0.5, p1 = 0.55,
 ## Equivalence (TOST)
 
 ``` r
+
 power_compute("rct_equivalence_continuous", "a_priori", d = 0,
               eq_margin = 0.2, alpha = 0.05, power = 0.8, n1 = 80, n2 = 80)
 #> ggpower result
@@ -229,6 +235,7 @@ power_compute("rct_equivalence_continuous", "a_priori", d = 0,
 ```
 
 ``` r
+
 power_compute("rct_equivalence_proportion", "post_hoc", p0 = 0.5, p1 = 0.52,
               eq_margin = 0.1, alpha = 0.05, n1 = 150, n2 = 150)
 #> ggpower result
@@ -260,6 +267,7 @@ power_compute("rct_equivalence_proportion", "post_hoc", p0 = 0.5, p1 = 0.52,
 `simon_two_stage` supports `post_hoc` and `sensitivity` only.
 
 ``` r
+
 power_compute("simon_two_stage", "post_hoc", p0 = 0.2, p1 = 0.4,
               r1 = 4, r = 10, n1 = 20, n2 = 20, alpha = 0.05)
 #> ggpower result
@@ -291,6 +299,7 @@ power_compute("simon_two_stage", "post_hoc", p0 = 0.2, p1 = 0.4,
 ## Cluster RCT
 
 ``` r
+
 power_compute("cluster_rct", "a_priori", d = 0.4, icc = 0.05,
               cluster_size = 10, n_clusters = 20, alpha = 0.05, power = 0.8)
 #> ggpower result
@@ -323,6 +332,7 @@ power_compute("cluster_rct", "a_priori", d = 0.4, icc = 0.05,
 ## Survival endpoints
 
 ``` r
+
 power_compute("survival_pmu", "a_priori", hazard_ratio = 0.65,
               event_rate = 0.5, alpha = 0.05, power = 0.8)
 #> ggpower result
@@ -353,6 +363,7 @@ power_compute("survival_pmu", "a_priori", hazard_ratio = 0.65,
 ## Binary and count endpoints
 
 ``` r
+
 power_compute("rct_superiority_binary", "post_hoc", p0 = 0.3, p1 = 0.45,
               alpha = 0.025, n1 = 120, n2 = 120)
 #> ggpower result
@@ -379,6 +390,7 @@ power_compute("rct_superiority_binary", "post_hoc", p0 = 0.3, p1 = 0.45,
 ```
 
 ``` r
+
 power_compute("count_endpoint_poisson", "a_priori", exp_beta1 = 1.3,
               base_rate = 0.85, exposure = 1, alpha = 0.05, power = 0.9,
               total_n = 250)

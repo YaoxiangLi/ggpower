@@ -102,7 +102,7 @@
       <h1>Logistic and Poisson Regression</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/YaoxiangLi/ggpower/blob/HEAD/vignettes/logistic-poisson.Rmd" class="external-link"><code>vignettes/logistic-poisson.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/YaoxiangLi/ggpower/blob/main/vignettes/logistic-poisson.Rmd" class="external-link"><code>vignettes/logistic-poisson.Rmd</code></a></small>
       <div class="d-none name"><code>logistic-poisson.Rmd</code></div>
     </div>
 
@@ -113,7 +113,7 @@ approximation).</p>
 <div class="section level2">
 <h2 id="logistic-regression">Logistic regression<a class="anchor" aria-label="anchor" href="#logistic-regression"></a>
 </h2>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><mo>log</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="normal">OR</mtext><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mrow><mtext mathvariant="normal">SE</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mo>log</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="normal">OR</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">z = \frac{\log(\text{OR})}{\text{SE}(\log(\text{OR}))}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><mrow><mi mathvariant="normal">log</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">OR</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mtext mathvariant="normal">SE</mtext><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">log</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">OR</mtext><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">z = \frac{\log(\text{OR})}{\text{SE}(\log(\text{OR}))}</annotation></semantics></math></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/power_compute.html">power_compute</a></span><span class="op">(</span><span class="st">"z_logistic"</span>, <span class="st">"a_priori"</span>, odds_ratio <span class="op">=</span> <span class="fl">1.5</span>, p0 <span class="op">=</span> <span class="fl">0.5</span>,</span>
 <span>              alpha <span class="op">=</span> <span class="fl">0.05</span>, power <span class="op">=</span> <span class="fl">0.95</span>, total_n <span class="op">=</span> <span class="fl">300</span>,</span>

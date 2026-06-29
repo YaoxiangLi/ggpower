@@ -10,6 +10,7 @@ H_0: \mu_T - \mu_C \le -\Delta \quad \text{vs} \quad H_1: \mu_T - \mu_C > -\Delt
 ```
 
 ``` r
+
 power_compute("rct_noninferiority_continuous", "a_priori", d = 0.1,
               ni_margin = 0.2, alpha = 0.025, power = 0.8, n1 = 100, n2 = 100)
 #> ggpower result
@@ -42,6 +43,7 @@ power_compute("rct_noninferiority_continuous", "a_priori", d = 0.1,
 ## Binary NI (normal approximation)
 
 ``` r
+
 power_compute("rct_noninferiority_binary", "post_hoc", p0 = 0.5, p1 = 0.55,
               ni_margin = 0.1, alpha = 0.025, n1 = 200, n2 = 200)
 #> ggpower result

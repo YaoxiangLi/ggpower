@@ -102,7 +102,7 @@
       <h1>Effect Size Conversions</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/YaoxiangLi/ggpower/blob/HEAD/vignettes/effect-size-conversions.Rmd" class="external-link"><code>vignettes/effect-size-conversions.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/YaoxiangLi/ggpower/blob/main/vignettes/effect-size-conversions.Rmd" class="external-link"><code>vignettes/effect-size-conversions.Rmd</code></a></small>
       <div class="d-none name"><code>effect-size-conversions.Rmd</code></div>
     </div>
 
@@ -155,7 +155,7 @@ increase<a class="anchor" aria-label="anchor" href="#r2-increase"></a>
 <div class="section level2">
 <h2 id="cohens-w-chi-square">Cohen’s w (chi-square)<a class="anchor" aria-label="anchor" href="#cohens-w-chi-square"></a>
 </h2>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><msqrt><mrow><munder><mo>∑</mo><mi>i</mi></munder><mfrac><msup><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>p</mi><mrow><mn>1</mn><mi>i</mi></mrow></msub><mo>−</mo><msub><mi>p</mi><mrow><mn>0</mn><mi>i</mi></mrow></msub><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><msub><mi>p</mi><mrow><mn>0</mn><mi>i</mi></mrow></msub></mfrac></mrow></msqrt></mrow><annotation encoding="application/x-tex">w = \sqrt{\sum_i \frac{(p_{1i} - p_{0i})^2}{p_{0i}}}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><msqrt><mrow><munder><mo>∑</mo><mi>i</mi></munder><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>p</mi><mrow><mn>1</mn><mi>i</mi></mrow></msub><mo>−</mo><msub><mi>p</mi><mrow><mn>0</mn><mi>i</mi></mrow></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><msub><mi>p</mi><mrow><mn>0</mn><mi>i</mi></mrow></msub></mfrac></mrow></msqrt></mrow><annotation encoding="application/x-tex">w = \sqrt{\sum_i \frac{(p_{1i} - p_{0i})^2}{p_{0i}}}</annotation></semantics></math></p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/effect_size_helpers.html">effect_size_w</a></span><span class="op">(</span>p0 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.25</span>, <span class="fl">0.25</span>, <span class="fl">0.25</span><span class="op">)</span>, p1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.4</span>, <span class="fl">0.3</span>, <span class="fl">0.2</span>, <span class="fl">0.1</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 0.4472136</span></span></code></pre></div>
@@ -163,7 +163,7 @@ increase<a class="anchor" aria-label="anchor" href="#r2-increase"></a>
 <div class="section level2">
 <h2 id="cohens-h-proportions">Cohen’s h (proportions)<a class="anchor" aria-label="anchor" href="#cohens-h-proportions"></a>
 </h2>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mn>2</mn><mo>arcsin</mo><mrow><mo stretchy="true" form="prefix">(</mo><msqrt><msub><mi>p</mi><mn>1</mn></msub></msqrt><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><mn>2</mn><mo>arcsin</mo><mrow><mo stretchy="true" form="prefix">(</mo><msqrt><msub><mi>p</mi><mn>0</mn></msub></msqrt><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">h = 2\arcsin(\sqrt{p_1}) - 2\arcsin(\sqrt{p_0})</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mn>2</mn><mrow><mi mathvariant="normal">arcsin</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><msqrt><msub><mi>p</mi><mn>1</mn></msub></msqrt><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>2</mn><mrow><mi mathvariant="normal">arcsin</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><msqrt><msub><mi>p</mi><mn>0</mn></msub></msqrt><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">h = 2\arcsin(\sqrt{p_1}) - 2\arcsin(\sqrt{p_0})</annotation></semantics></math></p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/effect_size_helpers.html">effect_size_h</a></span><span class="op">(</span>p1 <span class="op">=</span> <span class="fl">0.45</span>, p2 <span class="op">=</span> <span class="fl">0.3</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 0.3113494</span></span></code></pre></div>

@@ -29,6 +29,7 @@ to pick the sidebar entry that matches your endpoint and study design.
 ## Filter tests by module
 
 ``` r
+
 ggpower_tests(module = "biomarker")[, c("id", "label")]
 #>                                id
 #> roc_auc_one           roc_auc_one
@@ -49,6 +50,7 @@ ggpower_tests(module = "biomarker")[, c("id", "label")]
 ```
 
 ``` r
+
 ggpower_tests(module = "clinical")[, c("id", "label")]
 #>                                                          id
 #> rct_superiority_continuous       rct_superiority_continuous

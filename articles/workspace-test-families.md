@@ -9,6 +9,7 @@ t-test family.
 ## ANOVA and regression
 
 ``` r
+
 power_compute("f_anova_one_way", "a_priori", f = 0.25, alpha = 0.05,
               power = 0.8, groups = 4)
 #> ggpower result
@@ -36,6 +37,7 @@ power_compute("f_anova_one_way", "a_priori", f = 0.25, alpha = 0.05,
 ```
 
 ``` r
+
 f2 <- effect_size_f2(0.10)
 power_compute("f_mreg_omnibus", "post_hoc", f2 = f2,
               total_n = 95, predictors = 5)
@@ -61,6 +63,7 @@ power_compute("f_mreg_omnibus", "post_hoc", f2 = f2,
 ## Exact and proportion tests
 
 ``` r
+
 power_compute("exact_binomial", "post_hoc", p0 = 0.5, p1 = 0.65,
               n = 80, alpha = 0.05, tails = "one")
 #> ggpower result
@@ -84,6 +87,7 @@ power_compute("exact_binomial", "post_hoc", p0 = 0.5, p1 = 0.65,
 ```
 
 ``` r
+
 power_compute("exact_fisher", "post_hoc", p0 = 0.4, p1 = 0.7,
               n1 = 12, n2 = 12, alpha = 0.05, tails = "greater")
 #> ggpower result
@@ -110,6 +114,7 @@ power_compute("exact_fisher", "post_hoc", p0 = 0.4, p1 = 0.7,
 ```
 
 ``` r
+
 power_compute("exact_mcnemar", "post_hoc", p0 = 0.5, p1 = 0.65, n = 60, alpha = 0.05)
 #> ggpower result
 #> Test: Exact: McNemar test approximation through discordant-pair binomial test
@@ -134,6 +139,7 @@ power_compute("exact_mcnemar", "post_hoc", p0 = 0.5, p1 = 0.65, n = 60, alpha = 
 ## Correlation and z tests
 
 ``` r
+
 q <- effect_size_q(0.75, 0.88)
 power_compute("z_corr_independent", "post_hoc", q_effect = q,
               n1 = 51, n2 = 260, alpha = 0.05)
@@ -156,6 +162,7 @@ power_compute("z_corr_independent", "post_hoc", q_effect = q,
 ```
 
 ``` r
+
 power_compute("z_logistic", "a_priori", odds_ratio = 1.5, p0 = 0.5,
               alpha = 0.05, power = 0.95, total_n = 300,
               r2_other = 0, x_variance = 1)
@@ -188,6 +195,7 @@ power_compute("z_logistic", "a_priori", odds_ratio = 1.5, p0 = 0.5,
 ## Logistic and Poisson regression
 
 ``` r
+
 power_compute("z_poisson", "a_priori", exp_beta1 = 1.3,
               base_rate = 0.85, exposure = 1, alpha = 0.05,
               power = 0.95, r2_other = 0, x_variance = 0.25)
@@ -224,6 +232,7 @@ Nonparametric tests map rank-test planning to t-test noncentrality via
 ARE: $`d_{\text{eff}} = d \cdot \sqrt{\text{ARE}}`$.
 
 ``` r
+
 power_compute("wilcoxon_signed", "post_hoc", d = 0.5, n = 40,
               alpha = 0.05, are = 3 / pi)
 #> ggpower result
@@ -250,6 +259,7 @@ power_compute("wilcoxon_signed", "post_hoc", d = 0.5, n = 40,
 ```
 
 ``` r
+
 power_compute("wilcoxon_mann_whitney", "post_hoc", d = 0.5,
               n1 = 30, n2 = 30, alpha = 0.05, are = 3 / pi)
 #> ggpower result

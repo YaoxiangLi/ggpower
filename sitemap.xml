@@ -1,5 +1,7 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
 <url><loc>https://yaoxiangli.github.io/ggpower/404.html</loc></url>
+<url><loc>https://yaoxiangli.github.io/ggpower/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>https://yaoxiangli.github.io/ggpower/LICENSE.html</loc></url>
 <url><loc>https://yaoxiangli.github.io/ggpower/articles/analysis-modes.html</loc></url>
 <url><loc>https://yaoxiangli.github.io/ggpower/articles/anova-regression.html</loc></url>
 <url><loc>https://yaoxiangli.github.io/ggpower/articles/approximation-catalog.html</loc></url>
@@ -36,17 +38,15 @@
 <url><loc>https://yaoxiangli.github.io/ggpower/articles/t-tests.html</loc></url>
 <url><loc>https://yaoxiangli.github.io/ggpower/articles/workspace-test-families.html</loc></url>
 <url><loc>https://yaoxiangli.github.io/ggpower/authors.html</loc></url>
-<url><loc>https://yaoxiangli.github.io/ggpower/CODE_OF_CONDUCT.html</loc></url>
 <url><loc>https://yaoxiangli.github.io/ggpower/index.html</loc></url>
-<url><loc>https://yaoxiangli.github.io/ggpower/LICENSE.html</loc></url>
 <url><loc>https://yaoxiangli.github.io/ggpower/news/index.html</loc></url>
 <url><loc>https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.html</loc></url>
 <url><loc>https://yaoxiangli.github.io/ggpower/reference/format_result_html.html</loc></url>
 <url><loc>https://yaoxiangli.github.io/ggpower/reference/ggpower_calculator.html</loc></url>
 <url><loc>https://yaoxiangli.github.io/ggpower/reference/ggpower_result.html</loc></url>
+<url><loc>https://yaoxiangli.github.io/ggpower/reference/ggpower_t_one_sample.html</loc></url>
 <url><loc>https://yaoxiangli.github.io/ggpower/reference/ggpower_tests.html</loc></url>
 <url><loc>https://yaoxiangli.github.io/ggpower/reference/ggpower_ttest.html</loc></url>
-<url><loc>https://yaoxiangli.github.io/ggpower/reference/ggpower_t_one_sample.html</loc></url>
 <url><loc>https://yaoxiangli.github.io/ggpower/reference/index.html</loc></url>
 <url><loc>https://yaoxiangli.github.io/ggpower/reference/plot_distribution.html</loc></url>
 <url><loc>https://yaoxiangli.github.io/ggpower/reference/plot_power_curve.html</loc></url>

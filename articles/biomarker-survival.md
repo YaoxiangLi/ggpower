@@ -11,6 +11,7 @@ z \approx \frac{|\log(\text{HR})|}{\sqrt{1/D}} \cdot \sqrt{D \cdot p(1-p)}
 ## Post hoc
 
 ``` r
+
 power_compute("survival_logrank", "post_hoc", hazard_ratio = 0.65,
               total_n = 200, event_rate = 0.5, alpha = 0.05)
 #> ggpower result
@@ -39,6 +40,7 @@ power_compute("survival_logrank", "post_hoc", hazard_ratio = 0.65,
 ## A priori
 
 ``` r
+
 power_compute("survival_logrank", "a_priori", hazard_ratio = 0.7,
               event_rate = 0.5, alpha = 0.05, power = 0.8)
 #> ggpower result

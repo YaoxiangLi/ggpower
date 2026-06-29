@@ -9,6 +9,7 @@ z = \frac{\log(\text{OR})}{\text{SE}(\log(\text{OR}))}
 ```
 
 ``` r
+
 power_compute("z_logistic", "a_priori", odds_ratio = 1.5, p0 = 0.5,
               alpha = 0.05, power = 0.95, total_n = 300,
               r2_other = 0, x_variance = 1)
@@ -41,6 +42,7 @@ power_compute("z_logistic", "a_priori", odds_ratio = 1.5, p0 = 0.5,
 ## Poisson regression
 
 ``` r
+
 power_compute("z_poisson", "a_priori", exp_beta1 = 1.3,
               base_rate = 0.85, exposure = 1, alpha = 0.05,
               power = 0.95, r2_other = 0, x_variance = 0.25)
@@ -76,6 +78,7 @@ power_compute("z_poisson", "a_priori", exp_beta1 = 1.3,
 Same kernel via clinical module wrapper:
 
 ``` r
+
 power_compute("count_endpoint_poisson", "post_hoc", exp_beta1 = 1.3,
               base_rate = 0.85, exposure = 1, alpha = 0.05, total_n = 200)
 #> ggpower result

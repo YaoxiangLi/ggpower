@@ -102,7 +102,7 @@
       <h1>Non-Inferiority Trials</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/YaoxiangLi/ggpower/blob/HEAD/vignettes/pharma-non-inferiority.Rmd" class="external-link"><code>vignettes/pharma-non-inferiority.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/YaoxiangLi/ggpower/blob/main/vignettes/pharma-non-inferiority.Rmd" class="external-link"><code>vignettes/pharma-non-inferiority.Rmd</code></a></small>
       <div class="d-none name"><code>pharma-non-inferiority.Rmd</code></div>
     </div>
 
@@ -110,11 +110,11 @@
     
 <p>Non-inferiority tests whether a new treatment is not worse than
 control by more than a pre-specified margin
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Δ</mi><annotation encoding="application/x-tex">\Delta</annotation></semantics></math>.</p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Δ</mi><annotation encoding="application/x-tex">\Delta</annotation></semantics></math>.</p>
 <div class="section level2">
 <h2 id="continuous-ni">Continuous NI<a class="anchor" aria-label="anchor" href="#continuous-ni"></a>
 </h2>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><msub><mi>μ</mi><mi>T</mi></msub><mo>−</mo><msub><mi>μ</mi><mi>C</mi></msub><mo>≤</mo><mi>−</mi><mi>Δ</mi><mspace width="1.0em"></mspace><mtext mathvariant="normal">vs</mtext><mspace width="1.0em"></mspace><msub><mi>H</mi><mn>1</mn></msub><mo>:</mo><msub><mi>μ</mi><mi>T</mi></msub><mo>−</mo><msub><mi>μ</mi><mi>C</mi></msub><mo>&gt;</mo><mi>−</mi><mi>Δ</mi></mrow><annotation encoding="application/x-tex">H_0: \mu_T - \mu_C \le -\Delta \quad \text{vs} \quad H_1: \mu_T - \mu_C &gt; -\Delta</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><msub><mi>μ</mi><mi>T</mi></msub><mo>−</mo><msub><mi>μ</mi><mi>C</mi></msub><mo>≤</mo><mi>−</mi><mi mathvariant="normal">Δ</mi><mspace width="1.0em"></mspace><mtext mathvariant="normal">vs</mtext><mspace width="1.0em"></mspace><msub><mi>H</mi><mn>1</mn></msub><mo>:</mo><msub><mi>μ</mi><mi>T</mi></msub><mo>−</mo><msub><mi>μ</mi><mi>C</mi></msub><mo>&gt;</mo><mi>−</mi><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">H_0: \mu_T - \mu_C \le -\Delta \quad \text{vs} \quad H_1: \mu_T - \mu_C &gt; -\Delta</annotation></semantics></math></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/power_compute.html">power_compute</a></span><span class="op">(</span><span class="st">"rct_noninferiority_continuous"</span>, <span class="st">"a_priori"</span>, d <span class="op">=</span> <span class="fl">0.1</span>,</span>
 <span>              ni_margin <span class="op">=</span> <span class="fl">0.2</span>, alpha <span class="op">=</span> <span class="fl">0.025</span>, power <span class="op">=</span> <span class="fl">0.8</span>, n1 <span class="op">=</span> <span class="fl">100</span>, n2 <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>

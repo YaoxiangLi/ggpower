@@ -6,6 +6,7 @@ Every registered test with domain, module, parity, method, and supported
 modes:
 
 ``` r
+
 tests <- ggpower_tests()
 knitr::kable(
   tests[, c("id", "module", "domain", "family", "parity", "method", "modes")],
@@ -67,6 +68,7 @@ knitr::kable(
 ## Counts by module
 
 ``` r
+
 as.data.frame(table(tests$module))
 #>        Var1 Freq
 #> 1 biomarker    7

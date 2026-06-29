@@ -5,6 +5,7 @@ Exact and proportion tests for binary outcomes.
 ## Generic binomial
 
 ``` r
+
 power_compute("exact_binomial", "post_hoc", p0 = 0.5, p1 = 0.65,
               n = 80, alpha = 0.05, tails = "one")
 #> ggpower result
@@ -30,6 +31,7 @@ power_compute("exact_binomial", "post_hoc", p0 = 0.5, p1 = 0.65,
 ## One proportion vs constant
 
 ``` r
+
 power_compute("exact_one_proportion", "a_priori", p0 = 0.5, p1 = 0.7,
               alpha = 0.05, power = 0.8, tails = "two")
 #> ggpower result
@@ -57,6 +59,7 @@ power_compute("exact_one_proportion", "a_priori", p0 = 0.5, p1 = 0.7,
 ## Sign test
 
 ``` r
+
 power_compute("exact_sign", "post_hoc", p0 = 0.5, p1 = 0.65, n = 50, alpha = 0.05)
 #> ggpower result
 #> Test: Exact: Proportion: Sign test
@@ -81,6 +84,7 @@ power_compute("exact_sign", "post_hoc", p0 = 0.5, p1 = 0.65, n = 50, alpha = 0.0
 ## Fisher exact (two proportions)
 
 ``` r
+
 power_compute("exact_fisher", "post_hoc", p0 = 0.4, p1 = 0.7,
               n1 = 12, n2 = 12, alpha = 0.05, tails = "greater")
 #> ggpower result
@@ -109,6 +113,7 @@ power_compute("exact_fisher", "post_hoc", p0 = 0.4, p1 = 0.7,
 ## McNemar (approximation)
 
 ``` r
+
 power_compute("exact_mcnemar", "post_hoc", p0 = 0.5, p1 = 0.65, n = 60, alpha = 0.05)
 #> ggpower result
 #> Test: Exact: McNemar test approximation through discordant-pair binomial test
@@ -133,6 +138,7 @@ power_compute("exact_mcnemar", "post_hoc", p0 = 0.5, p1 = 0.65, n = 60, alpha = 
 ## Chi-square contingency (Cohen’s w)
 
 ``` r
+
 w <- effect_size_w(c(.25, .25, .25, .25), c(.35, .15, .30, .20))
 power_compute("chisq_contingency", "a_priori", w = w, alpha = 0.05, power = 0.8,
               groups = 4)

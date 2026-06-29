@@ -21,6 +21,7 @@ without leaving the same session.
 ## Launch the app
 
 ``` r
+
 run_app()
 ```
 
@@ -43,6 +44,7 @@ plot panels.
 The same calculation is available programmatically:
 
 ``` r
+
 power_compute(
   "t_two_sample",
   analysis = "a_priori",

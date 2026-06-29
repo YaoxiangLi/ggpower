@@ -10,6 +10,7 @@ correlation.
 ```
 
 ``` r
+
 power_compute("cluster_rct", "a_priori", d = 0.4, icc = 0.05,
               cluster_size = 10, n_clusters = 20, alpha = 0.05, power = 0.8)
 #> ggpower result
@@ -42,6 +43,7 @@ power_compute("cluster_rct", "a_priori", d = 0.4, icc = 0.05,
 ## Post hoc
 
 ``` r
+
 power_compute("cluster_rct", "post_hoc", d = 0.35, icc = 0.05,
               cluster_size = 12, n_clusters = 25, alpha = 0.05)
 #> ggpower result

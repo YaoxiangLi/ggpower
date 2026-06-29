@@ -11,6 +11,7 @@ $`\min(\text{Power}_{\text{sens}}, \text{Power}_{\text{spec}})`$.
 ## Post hoc
 
 ``` r
+
 power_compute("diagnostic_acc", "post_hoc", sensitivity = 0.85, specificity = 0.85,
               n_pos = 50, n_neg = 50, alpha = 0.05)
 #> ggpower result
@@ -42,6 +43,7 @@ power_compute("diagnostic_acc", "post_hoc", sensitivity = 0.85, specificity = 0.
 ## A priori
 
 ``` r
+
 power_compute("diagnostic_acc", "a_priori", sensitivity = 0.9, specificity = 0.9,
               alpha = 0.05, power = 0.8, allocation_ratio = 1)
 #> ggpower result

@@ -102,7 +102,7 @@
       <h1>Cluster RCT</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/YaoxiangLi/ggpower/blob/HEAD/vignettes/pharma-cluster-rct.Rmd" class="external-link"><code>vignettes/pharma-cluster-rct.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/YaoxiangLi/ggpower/blob/main/vignettes/pharma-cluster-rct.Rmd" class="external-link"><code>vignettes/pharma-cluster-rct.Rmd</code></a></small>
       <div class="d-none name"><code>pharma-cluster-rct.Rmd</code></div>
     </div>
 
@@ -113,7 +113,7 @@ correlation.</p>
 <div class="section level2">
 <h2 id="formula">Formula<a class="anchor" aria-label="anchor" href="#formula"></a>
 </h2>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">DE</mtext><mo>=</mo><mn>1</mn><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>m</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>⋅</mo><mtext mathvariant="normal">ICC</mtext></mrow><annotation encoding="application/x-tex">\text{DE} = 1 + (m - 1) \cdot \text{ICC}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">DE</mtext><mo>=</mo><mn>1</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mtext mathvariant="normal">ICC</mtext></mrow><annotation encoding="application/x-tex">\text{DE} = 1 + (m - 1) \cdot \text{ICC}</annotation></semantics></math></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/power_compute.html">power_compute</a></span><span class="op">(</span><span class="st">"cluster_rct"</span>, <span class="st">"a_priori"</span>, d <span class="op">=</span> <span class="fl">0.4</span>, icc <span class="op">=</span> <span class="fl">0.05</span>,</span>
 <span>              cluster_size <span class="op">=</span> <span class="fl">10</span>, n_clusters <span class="op">=</span> <span class="fl">20</span>, alpha <span class="op">=</span> <span class="fl">0.05</span>, power <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span></span>

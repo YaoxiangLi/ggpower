@@ -12,6 +12,7 @@ d = \frac{\mu_1 - \mu_2}{\sigma}, \quad \delta = d\sqrt{\frac{n_1 n_2}{n_1+n_2}}
 ## Post hoc power
 
 ``` r
+
 power_compute("ttest_biomarker", "post_hoc", d = 0.6, n1 = 40, n2 = 40,
               alpha = 0.05, tails = "two")
 #> ggpower result
@@ -37,6 +38,7 @@ power_compute("ttest_biomarker", "post_hoc", d = 0.6, n1 = 40, n2 = 40,
 ## A priori sample size
 
 ``` r
+
 power_compute("ttest_biomarker", "a_priori", d = 0.5, alpha = 0.05,
               power = 0.8, allocation_ratio = 1)
 #> ggpower result

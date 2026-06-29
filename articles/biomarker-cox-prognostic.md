@@ -13,6 +13,7 @@ where $`E`$ is the expected number of events.
 ## Post hoc
 
 ``` r
+
 power_compute("cox_regression", "post_hoc", hazard_ratio = 0.65,
               events = 100, alpha = 0.05)
 #> ggpower result
@@ -38,6 +39,7 @@ power_compute("cox_regression", "post_hoc", hazard_ratio = 0.65,
 ## A priori events
 
 ``` r
+
 power_compute("cox_regression", "a_priori", hazard_ratio = 0.7,
               alpha = 0.05, power = 0.8)
 #> ggpower result

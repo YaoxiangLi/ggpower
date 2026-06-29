@@ -10,6 +10,7 @@ d = \frac{\mu_1 - \mu_0}{\sigma}, \quad \delta = d\sqrt{n}
 ```
 
 ``` r
+
 power_compute("t_one_sample", "a_priori", d = 0.625, alpha = 0.05,
               power = 0.95, tails = "one")
 #> ggpower result
@@ -38,6 +39,7 @@ power_compute("t_one_sample", "a_priori", d = 0.625, alpha = 0.05,
 ## Two independent means
 
 ``` r
+
 power_compute("t_two_sample", "a_priori", d = 0.5, alpha = 0.05,
               power = 0.8, tails = "two", allocation_ratio = 1)
 #> ggpower result
@@ -68,6 +70,7 @@ power_compute("t_two_sample", "a_priori", d = 0.5, alpha = 0.05,
 ## Matched pairs
 
 ``` r
+
 power_compute("t_paired", "post_hoc", d = 0.42, n = 50, alpha = 0.05)
 #> ggpower result
 #> Test: t test: Means - difference between two dependent means (matched pairs)
@@ -90,6 +93,7 @@ power_compute("t_paired", "post_hoc", d = 0.42, n = 50, alpha = 0.05)
 ## Point-biserial correlation
 
 ``` r
+
 power_compute("t_point_biserial", "a_priori", rho = 0.3, alpha = 0.05, power = 0.8)
 #> ggpower result
 #> Test: t test: Correlation - point biserial model
@@ -117,6 +121,7 @@ power_compute("t_point_biserial", "a_priori", rho = 0.3, alpha = 0.05, power = 0
 ## Linear regression slope
 
 ``` r
+
 power_compute("t_linear_regression", "post_hoc", slope_h1 = -0.0667,
               slope_h0 = 0, sd_x = 7.5, sd_y = 4, n = 100)
 #> ggpower result
@@ -143,6 +148,7 @@ power_compute("t_linear_regression", "post_hoc", slope_h1 = -0.0667,
 ## Two-group slope difference
 
 ``` r
+
 power_compute("t_linear_regression_two_groups", "a_priori", delta_slope = 0.1,
               sd_x1 = 1, sd_x2 = 1, residual_sd = 1, alpha = 0.05, power = 0.8)
 #> ggpower result
@@ -178,6 +184,7 @@ power_compute("t_linear_regression_two_groups", "a_priori", delta_slope = 0.1,
 No `a_priori` mode — supply NCP and df directly.
 
 ``` r
+
 power_compute("t_generic", "post_hoc", ncp = 3, df = 29, alpha = 0.05, tails = "two")
 #> ggpower result
 #> Test: t test: Generic case

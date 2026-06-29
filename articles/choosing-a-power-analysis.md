@@ -18,6 +18,7 @@ Suppose a clinical scale has a baseline mean of 10, the expected mean is
 15, and the standard deviation is 8. The effect size is:
 
 ``` r
+
 d <- effect_size_d(mean_h1 = 15, mean_h0 = 10, sd = 8)
 d
 #> [1] 0.625
@@ -26,6 +27,7 @@ d
 For a one-tailed test with alpha = 0.05 and target power = 0.95:
 
 ``` r
+
 power_compute("t_one_sample", "a_priori", d = d, alpha = 0.05,
               power = 0.95, tails = "one")
 #> ggpower result
@@ -60,6 +62,7 @@ registers **48 tests** across workspace, biomarker, and clinical
 workflows.
 
 ``` r
+
 ggpower_tests()[, c("id", "family", "domain", "module")]
 #>                                                            id           family
 #> t_one_sample                                     t_one_sample          t tests
@@ -191,6 +194,7 @@ to pick the sidebar entry that matches your endpoint and study design.
 - **Clinical Trials** — superiority, NI, equivalence, Simon, cluster RCT
 
 ``` r
+
 ggpower_tests(module = "biomarker")[, c("id", "label")]
 #>                                id
 #> roc_auc_one           roc_auc_one
@@ -211,6 +215,7 @@ ggpower_tests(module = "biomarker")[, c("id", "label")]
 ```
 
 ``` r
+
 ggpower_tests(module = "clinical")[, c("id", "label")]
 #>                                                          id
 #> rct_superiority_continuous       rct_superiority_continuous

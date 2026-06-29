@@ -10,6 +10,7 @@ BH at level $`q`$.
 ## Post hoc (recommended)
 
 ``` r
+
 power_compute("discovery_fdr", "post_hoc", effect_d = 0.5, m_tests = 1000,
               pi0 = 0.9, fdr_level = 0.05, n = 40, alpha = 0.05)
 #> ggpower result

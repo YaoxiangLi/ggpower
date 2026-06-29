@@ -17,6 +17,7 @@ supports only `post_hoc` and `sensitivity`.
 ## A priori — sample size
 
 ``` r
+
 power_compute("t_two_sample", "a_priori", d = 0.5, alpha = 0.05,
               power = 0.8, tails = "two", allocation_ratio = 1)
 #> ggpower result
@@ -47,6 +48,7 @@ power_compute("t_two_sample", "a_priori", d = 0.5, alpha = 0.05,
 ## Post hoc — achieved power
 
 ``` r
+
 power_compute("t_one_sample", "post_hoc", d = 0.625, n = 30,
               alpha = 0.05, tails = "one")
 #> ggpower result
@@ -70,6 +72,7 @@ power_compute("t_one_sample", "post_hoc", d = 0.625, n = 30,
 ## Criterion — alpha
 
 ``` r
+
 power_compute("t_one_sample", "criterion", d = 0.5, n = 40,
               power = 0.8, tails = "two")
 #> ggpower result
@@ -96,6 +99,7 @@ power_compute("t_one_sample", "criterion", d = 0.5, n = 40,
 ## Sensitivity — effect size
 
 ``` r
+
 power_compute("f_mreg_omnibus", "sensitivity", alpha = 0.05, power = 0.8,
               total_n = 100, predictors = 3)
 #> ggpower result
@@ -122,6 +126,7 @@ power_compute("f_mreg_omnibus", "sensitivity", alpha = 0.05, power = 0.8,
 ## Compromise — alpha and beta ratio
 
 ``` r
+
 power_compute("t_one_sample", "compromise", d = 0.5, n = 40, q = 1, tails = "two")
 #> ggpower result
 #> Test: t test: Means - difference from constant (one sample case)
@@ -154,16 +159,19 @@ Helper functions convert study parameters into effect sizes used by
 [`power_compute()`](https://yaoxiangli.github.io/ggpower/reference/power_compute.md).
 
 ``` r
+
 effect_size_d(mean_h1 = 15, mean_h0 = 10, sd = 8)
 #> [1] 0.625
 ```
 
 ``` r
+
 effect_size_f2(r2 = 0.1)
 #> [1] 0.1111111
 ```
 
 ``` r
+
 effect_size_w(p0 = c(0.25, 0.25, 0.25, 0.25), p1 = c(0.4, 0.3, 0.2, 0.1))
 #> [1] 0.4472136
 ```
@@ -178,6 +186,7 @@ The **Calculator** module evaluates distribution-function scripts via
 [`ggpower_calculator()`](https://yaoxiangli.github.io/ggpower/reference/ggpower_calculator.md).
 
 ``` r
+
 ggpower_calculator("zinv(0.975)")
 #> [1] 1.959964
 ```

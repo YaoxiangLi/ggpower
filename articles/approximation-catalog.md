@@ -6,6 +6,7 @@ Tests marked `approximation` use large-sample or proxy formulas. Result
 objects include `notes` explaining the kernel used.
 
 ``` r
+
 tests <- ggpower_tests()
 approx <- tests[tests$parity == "approximation", c("id", "method", "module")]
 knitr::kable(approx, row.names = FALSE)

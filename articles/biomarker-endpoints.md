@@ -10,6 +10,7 @@ Two-group mean difference for expression biomarkers (wrapper around
 `t_two_sample`).
 
 ``` r
+
 power_compute("ttest_biomarker", "post_hoc", d = 0.6, n1 = 40, n2 = 40,
               alpha = 0.05, tails = "two")
 #> ggpower result
@@ -33,6 +34,7 @@ power_compute("ttest_biomarker", "post_hoc", d = 0.6, n1 = 40, n2 = 40,
 ```
 
 ``` r
+
 power_compute("ttest_biomarker", "a_priori", d = 0.5, alpha = 0.05,
               power = 0.8, allocation_ratio = 1)
 #> ggpower result
@@ -63,6 +65,7 @@ power_compute("ttest_biomarker", "a_priori", d = 0.5, alpha = 0.05,
 ## ROC and AUC
 
 ``` r
+
 power_compute(
   "roc_auc_one",
   analysis = "a_priori",
@@ -101,6 +104,7 @@ power_compute(
 ```
 
 ``` r
+
 power_compute(
   "roc_auc_two",
   analysis = "post_hoc",
@@ -138,6 +142,7 @@ power_compute(
 ## Diagnostic accuracy
 
 ``` r
+
 power_compute("diagnostic_acc", "post_hoc", sensitivity = 0.85, specificity = 0.85,
               n_pos = 50, n_neg = 50, alpha = 0.05)
 #> ggpower result
@@ -167,6 +172,7 @@ power_compute("diagnostic_acc", "post_hoc", sensitivity = 0.85, specificity = 0.
 ```
 
 ``` r
+
 power_compute("diagnostic_acc", "a_priori", sensitivity = 0.9, specificity = 0.9,
               alpha = 0.05, power = 0.8, allocation_ratio = 1)
 #> ggpower result
@@ -200,6 +206,7 @@ power_compute("diagnostic_acc", "a_priori", sensitivity = 0.9, specificity = 0.9
 ## Survival (log-rank)
 
 ``` r
+
 power_compute("survival_logrank", "post_hoc", hazard_ratio = 0.65,
               total_n = 200, event_rate = 0.5, alpha = 0.05)
 #> ggpower result
@@ -228,6 +235,7 @@ power_compute("survival_logrank", "post_hoc", hazard_ratio = 0.65,
 ## Cox prognostic models
 
 ``` r
+
 power_compute("cox_regression", "post_hoc", hazard_ratio = 0.65,
               events = 100, alpha = 0.05)
 #> ggpower result
@@ -251,6 +259,7 @@ power_compute("cox_regression", "post_hoc", hazard_ratio = 0.65,
 ```
 
 ``` r
+
 power_compute("cox_regression", "a_priori", hazard_ratio = 0.7,
               alpha = 0.05, power = 0.8)
 #> ggpower result
@@ -278,6 +287,7 @@ power_compute("cox_regression", "a_priori", hazard_ratio = 0.7,
 ## Multiplicity and FDR
 
 ``` r
+
 power_compute("discovery_fdr", "post_hoc", effect_d = 0.5, m_tests = 1000,
               pi0 = 0.9, fdr_level = 0.05, n = 40, alpha = 0.05)
 #> ggpower result

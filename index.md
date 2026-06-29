@@ -49,6 +49,7 @@ catalog](https://yaoxiangli.github.io/ggpower/articles/approximation-catalog.htm
 ## Examples
 
 ``` r
+
 power_compute(
   "t_one_sample",
   "a_priori",
@@ -71,6 +72,7 @@ power_compute(
 Run the app with:
 
 ``` r
+
 ggpower::run_app()
 ```
 

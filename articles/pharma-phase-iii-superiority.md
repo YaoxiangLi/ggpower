@@ -6,6 +6,7 @@ control.
 ## Continuous endpoint (one-sided)
 
 ``` r
+
 power_compute(
   "rct_superiority_continuous",
   analysis = "post_hoc",
@@ -37,6 +38,7 @@ power_compute(
 ## Binary endpoint
 
 ``` r
+
 power_compute(
   "rct_superiority_binary",
   analysis = "a_priori",
@@ -115,6 +117,7 @@ power_compute(
 ## Multi-arm superiority (ANOVA wrapper)
 
 ``` r
+
 power_compute("multi_arm_superiority", "a_priori", f = 0.25, groups = 3,
               alpha = 0.05, power = 0.8)
 #> ggpower result

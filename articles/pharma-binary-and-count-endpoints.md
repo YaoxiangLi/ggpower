@@ -5,6 +5,7 @@ Response rates and count endpoints in clinical trials.
 ## Binary superiority
 
 ``` r
+
 power_compute("rct_superiority_binary", "post_hoc", p0 = 0.3, p1 = 0.45,
               alpha = 0.025, n1 = 120, n2 = 120)
 #> ggpower result
@@ -33,6 +34,7 @@ power_compute("rct_superiority_binary", "post_hoc", p0 = 0.3, p1 = 0.45,
 ## Poisson count endpoint
 
 ``` r
+
 power_compute("count_endpoint_poisson", "a_priori", exp_beta1 = 1.3,
               base_rate = 0.85, exposure = 1, alpha = 0.05, power = 0.9,
               total_n = 250)

@@ -11,6 +11,7 @@ Two one-sided tests (TOST) for bioequivalence and similarity trials.
 ## Continuous equivalence
 
 ``` r
+
 power_compute("rct_equivalence_continuous", "a_priori", d = 0,
               eq_margin = 0.2, alpha = 0.05, power = 0.8, n1 = 80, n2 = 80)
 #> ggpower result
@@ -41,6 +42,7 @@ power_compute("rct_equivalence_continuous", "a_priori", d = 0,
 ## Proportion equivalence
 
 ``` r
+
 power_compute("rct_equivalence_proportion", "post_hoc", p0 = 0.5, p1 = 0.52,
               eq_margin = 0.1, alpha = 0.05, n1 = 150, n2 = 150)
 #> ggpower result
