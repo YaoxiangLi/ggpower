@@ -1,0 +1,70 @@
+---
+title: "Effect Size Conversions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Effect Size Conversions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+Helper functions convert study parameters into effect sizes used by `power_compute()`.
+
+## Cohen's d
+
+$$d = \frac{\mu_1 - \mu_0}{\sigma}$$
+
+```{r d}
+effect_size_d(mean_h1 = 15, mean_h0 = 10, sd = 8)
+```
+
+## Cohen's f from $\eta^2$
+
+$$f = \sqrt{\frac{\eta^2}{1-\eta^2}}$$
+
+```{r f}
+effect_size_f(eta2 = 0.06)
+eta2_from_f(0.25)
+```
+
+## Cohen's $f^2$ from $R^2$
+
+$$f^2 = \frac{R^2}{1-R^2}$$
+
+```{r f2}
+effect_size_f2(r2 = 0.1)
+r2_from_f2(0.1111111)
+```
+
+## $R^2$ increase
+
+$$f^2 = \frac{R^2_{\text{full}} - R^2_{\text{reduced}}}{1 - R^2_{\text{full}}}$$
+
+```{r f2inc}
+effect_size_f2_increase(r2_full = 0.2, r2_reduced = 0.1)
+```
+
+## Cohen's w (chi-square)
+
+$$w = \sqrt{\sum_i \frac{(p_{1i} - p_{0i})^2}{p_{0i}}}$$
+
+```{r w}
+effect_size_w(p0 = c(0.25, 0.25, 0.25, 0.25), p1 = c(0.4, 0.3, 0.2, 0.1))
+```
+
+## Cohen's h (proportions)
+
+$$h = 2\arcsin(\sqrt{p_1}) - 2\arcsin(\sqrt{p_0})$$
+
+```{r h}
+effect_size_h(p1 = 0.45, p2 = 0.3)
+```
+
+## Related
+
+- [Formula reference](formula-reference.html)
+- [t Tests](t-tests.html)

@@ -1,0 +1,55 @@
+---
+title: "Phase III Superiority Trials"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Phase III Superiority Trials}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+Superiority trials test whether the new treatment is better than control.
+
+## Continuous endpoint (one-sided)
+
+```{r cont}
+power_compute(
+  "rct_superiority_continuous",
+  analysis = "post_hoc",
+  d = 0.4,
+  alpha = 0.025,
+  n1 = 120,
+  n2 = 120
+)
+```
+
+## Binary endpoint
+
+```{r binary}
+power_compute(
+  "rct_superiority_binary",
+  analysis = "a_priori",
+  p0 = 0.3,
+  p1 = 0.45,
+  alpha = 0.025,
+  power = 0.9,
+  n1 = 50,
+  n2 = 50
+)
+```
+
+## Multi-arm superiority (ANOVA wrapper)
+
+```{r multi}
+power_compute("multi_arm_superiority", "a_priori", f = 0.25, groups = 3,
+              alpha = 0.05, power = 0.8)
+```
+
+## Related
+
+- [Non-inferiority](pharma-non-inferiority.html)
+- [Survival endpoints](pharma-survival-endpoints.html)

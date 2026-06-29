@@ -1,0 +1,71 @@
+---
+title: "t Tests"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{t Tests}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+t tests cover mean differences, matched pairs, point-biserial correlations,
+regression slopes, and generic noncentrality.
+
+## One sample
+
+$$d = \frac{\mu_1 - \mu_0}{\sigma}, \quad \delta = d\sqrt{n}$$
+
+```{r one}
+power_compute("t_one_sample", "a_priori", d = 0.625, alpha = 0.05,
+              power = 0.95, tails = "one")
+```
+
+## Two independent means
+
+```{r two}
+power_compute("t_two_sample", "a_priori", d = 0.5, alpha = 0.05,
+              power = 0.8, tails = "two", allocation_ratio = 1)
+```
+
+## Matched pairs
+
+```{r paired}
+power_compute("t_paired", "post_hoc", d = 0.42, n = 50, alpha = 0.05)
+```
+
+## Point-biserial correlation
+
+```{r pb}
+power_compute("t_point_biserial", "a_priori", rho = 0.3, alpha = 0.05, power = 0.8)
+```
+
+## Linear regression slope
+
+```{r slope}
+power_compute("t_linear_regression", "post_hoc", slope_h1 = -0.0667,
+              slope_h0 = 0, sd_x = 7.5, sd_y = 4, n = 100)
+```
+
+## Two-group slope difference
+
+```{r slope2}
+power_compute("t_linear_regression_two_groups", "a_priori", delta_slope = 0.1,
+              sd_x1 = 1, sd_x2 = 1, residual_sd = 1, alpha = 0.05, power = 0.8)
+```
+
+## Generic t (direct NCP)
+
+No `a_priori` mode — supply NCP and df directly.
+
+```{r generic}
+power_compute("t_generic", "post_hoc", ncp = 3, df = 29, alpha = 0.05, tails = "two")
+```
+
+## Related
+
+- [Analysis modes](analysis-modes.html)
+- [Workspace test families](workspace-test-families.html)

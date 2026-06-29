@@ -1,0 +1,94 @@
+---
+title: "Analysis Modes"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Analysis Modes}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+ggpower supports five analysis modes. Each mode solves for a different unknown
+given the others.
+
+| Mode | Solves for | When to use |
+|------|------------|-------------|
+| `a_priori` | Sample size | Planning before data collection |
+| `post_hoc` | Power | Fixed sample size, retrospective |
+| `criterion` | Alpha | Choose significance level |
+| `sensitivity` | Effect size | Minimum detectable effect |
+| `compromise` | Alpha and beta | Balance $\alpha$ and $\beta$ via ratio $q = \beta/\alpha$ |
+
+**Restrictions:** `t_generic` has no `a_priori`. `simon_two_stage` supports only
+`post_hoc` and `sensitivity`.
+
+## A priori — sample size
+
+```{r a_priori}
+power_compute("t_two_sample", "a_priori", d = 0.5, alpha = 0.05,
+              power = 0.8, tails = "two", allocation_ratio = 1)
+```
+
+## Post hoc — achieved power
+
+```{r post_hoc}
+power_compute("t_one_sample", "post_hoc", d = 0.625, n = 30,
+              alpha = 0.05, tails = "one")
+```
+
+## Criterion — alpha
+
+```{r criterion}
+power_compute("t_one_sample", "criterion", d = 0.5, n = 40,
+              power = 0.8, tails = "two")
+```
+
+## Sensitivity — effect size
+
+```{r sensitivity}
+power_compute("f_mreg_omnibus", "sensitivity", alpha = 0.05, power = 0.8,
+              total_n = 100, predictors = 3)
+```
+
+## Compromise — alpha and beta ratio
+
+```{r compromise}
+power_compute("t_one_sample", "compromise", d = 0.5, n = 40, q = 1, tails = "two")
+```
+
+## Effect size conversions
+
+Helper functions convert study parameters into effect sizes used by `power_compute()`.
+
+```{r d}
+effect_size_d(mean_h1 = 15, mean_h0 = 10, sd = 8)
+```
+
+```{r f2}
+effect_size_f2(r2 = 0.1)
+```
+
+```{r w}
+effect_size_w(p0 = c(0.25, 0.25, 0.25, 0.25), p1 = c(0.4, 0.3, 0.2, 0.1))
+```
+
+See the pkgdown site for the full [effect size conversions](https://yaoxiangli.github.io/ggpower/articles/effect-size-conversions.html) article.
+
+## Calculator
+
+The **Calculator** module evaluates distribution-function scripts via `ggpower_calculator()`.
+
+```{r calc}
+ggpower_calculator("zinv(0.975)")
+```
+
+See the pkgdown site for the full [calculator](https://yaoxiangli.github.io/ggpower/articles/calculator.html) article.
+
+## Related
+
+- [Choosing a power analysis](choosing-a-power-analysis.html)
+- [Support matrix](support-matrix.html)

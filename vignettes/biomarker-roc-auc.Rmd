@@ -1,0 +1,65 @@
+---
+title: "Biomarker ROC and AUC Power"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Biomarker ROC and AUC Power}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+## In plain English
+
+You have a continuous biomarker and want to know whether it can **discriminate**
+diseased from non-diseased subjects. ROC AUC summarizes that discrimination.
+This vignette covers one-sample AUC vs chance (0.5) and two-sample AUC comparison.
+
+## One-sample AUC vs null
+
+```{r roc-one}
+power_compute(
+  "roc_auc_one",
+  analysis = "a_priori",
+  auc = 0.75,
+  auc0 = 0.5,
+  n_pos = 50,
+  n_neg = 50,
+  alpha = 0.05,
+  power = 0.8,
+  tails = "two"
+)
+```
+
+## Compare two biomarkers
+
+```{r roc-two}
+power_compute(
+  "roc_auc_two",
+  analysis = "post_hoc",
+  auc1 = 0.78,
+  auc2 = 0.62,
+  n1 = 80,
+  n2 = 80,
+  alpha = 0.05,
+  tails = "two"
+)
+```
+
+## Formula
+
+Hanley-McNeil SE for one AUC; DeLong-style variance for two independent AUCs.
+See [formula reference](formula-reference.html).
+
+## Plot
+
+Run the calculation in the **Biomarker Discovery** module to see the distribution
+and sample-size curve.
+
+## Related analyses
+
+- [Diagnostic accuracy](biomarker-diagnostic-accuracy.html)
+- [Differential expression](biomarker-differential-expression.html)

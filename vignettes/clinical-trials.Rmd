@@ -1,0 +1,113 @@
+---
+title: "Clinical Trials"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Clinical Trials}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+The **Clinical Trials** module covers Phase III superiority, non-inferiority,
+equivalence, oncology two-stage, cluster RCT, survival, and count endpoints.
+
+## Phase III superiority
+
+```{r sup-cont}
+power_compute(
+  "rct_superiority_continuous",
+  analysis = "post_hoc",
+  d = 0.4,
+  alpha = 0.025,
+  n1 = 120,
+  n2 = 120
+)
+```
+
+```{r sup-binary}
+power_compute(
+  "rct_superiority_binary",
+  analysis = "a_priori",
+  p0 = 0.3,
+  p1 = 0.45,
+  alpha = 0.025,
+  power = 0.9,
+  n1 = 50,
+  n2 = 50
+)
+```
+
+```{r sup-multi}
+power_compute("multi_arm_superiority", "a_priori", f = 0.25, groups = 3,
+              alpha = 0.05, power = 0.8)
+```
+
+## Non-inferiority
+
+```{r ni-cont}
+power_compute("rct_noninferiority_continuous", "a_priori", d = 0.1,
+              ni_margin = 0.2, alpha = 0.025, power = 0.8, n1 = 100, n2 = 100)
+```
+
+```{r ni-binary}
+power_compute("rct_noninferiority_binary", "post_hoc", p0 = 0.5, p1 = 0.55,
+              ni_margin = 0.1, alpha = 0.025, n1 = 200, n2 = 200)
+```
+
+## Equivalence (TOST)
+
+```{r eq-cont}
+power_compute("rct_equivalence_continuous", "a_priori", d = 0,
+              eq_margin = 0.2, alpha = 0.05, power = 0.8, n1 = 80, n2 = 80)
+```
+
+```{r eq-prop}
+power_compute("rct_equivalence_proportion", "post_hoc", p0 = 0.5, p1 = 0.52,
+              eq_margin = 0.1, alpha = 0.05, n1 = 150, n2 = 150)
+```
+
+## Simon two-stage (Phase II)
+
+`simon_two_stage` supports `post_hoc` and `sensitivity` only.
+
+```{r simon}
+power_compute("simon_two_stage", "post_hoc", p0 = 0.2, p1 = 0.4,
+              r1 = 4, r = 10, n1 = 20, n2 = 20, alpha = 0.05)
+```
+
+## Cluster RCT
+
+```{r cluster}
+power_compute("cluster_rct", "a_priori", d = 0.4, icc = 0.05,
+              cluster_size = 10, n_clusters = 20, alpha = 0.05, power = 0.8)
+```
+
+## Survival endpoints
+
+```{r surv}
+power_compute("survival_pmu", "a_priori", hazard_ratio = 0.65,
+              event_rate = 0.5, alpha = 0.05, power = 0.8)
+```
+
+## Binary and count endpoints
+
+```{r binary}
+power_compute("rct_superiority_binary", "post_hoc", p0 = 0.3, p1 = 0.45,
+              alpha = 0.025, n1 = 120, n2 = 120)
+```
+
+```{r count}
+power_compute("count_endpoint_poisson", "a_priori", exp_beta1 = 1.3,
+              base_rate = 0.85, exposure = 1, alpha = 0.05, power = 0.9,
+              total_n = 250)
+```
+
+## Related
+
+- [Biomarker endpoints](biomarker-endpoints.html)
+- [Scenario guide](scenario-guide.html)
+- [Support matrix](support-matrix.html)

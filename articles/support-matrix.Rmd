@@ -1,0 +1,67 @@
+---
+title: "Support Matrix"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Support Matrix}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+## Coverage table
+
+Every registered test with domain, module, parity, method, and supported modes:
+
+```{r matrix}
+tests <- ggpower_tests()
+knitr::kable(
+  tests[, c("id", "module", "domain", "family", "parity", "method", "modes")],
+  row.names = FALSE
+)
+```
+
+## Counts by module
+
+```{r counts}
+as.data.frame(table(tests$module))
+```
+
+## Mode restrictions
+
+| Test | Supported modes |
+|------|-----------------|
+| `t_generic` | `post_hoc`, `criterion`, `sensitivity`, `compromise` (no `a_priori`) |
+| `simon_two_stage` | `post_hoc`, `sensitivity` only |
+
+## Vignette index
+
+CRAN ships consolidated vignettes; the pkgdown site adds per-test deep dives.
+
+```{r links, echo=FALSE}
+vignette_map <- data.frame(
+  module = c(
+    rep("getting started", 3), rep("workspace", 2), rep("biomarker", 1),
+    rep("clinical", 1), rep("reference", 3)
+  ),
+  article = c(
+    "choosing-a-power-analysis", "getting-started-gui", "scenario-guide",
+    "t-tests", "workspace-test-families",
+    "biomarker-endpoints", "clinical-trials",
+    "analysis-modes", "support-matrix", "reference-validation"
+  ),
+  stringsAsFactors = FALSE
+)
+knitr::kable(vignette_map, col.names = c("Module area", "Vignette slug"))
+```
+
+Approximation limits and method notes: [approximation catalog](https://yaoxiangli.github.io/ggpower/articles/approximation-catalog.html) (pkgdown only).
+
+## Related analyses
+
+- [Reference validation](reference-validation.html)
+- [Scenario guide](scenario-guide.html)
+- [Formula reference](https://yaoxiangli.github.io/ggpower/articles/formula-reference.html) (pkgdown only)

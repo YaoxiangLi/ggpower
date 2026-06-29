@@ -1,0 +1,40 @@
+---
+title: "Cox Prognostic Models"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Cox Prognostic Models}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+Power for a single covariate Cox proportional hazards model.
+
+## Formula
+
+$$z \approx |\log(\text{HR})| \sqrt{E}$$
+
+where $E$ is the expected number of events.
+
+## Post hoc
+
+```{r example}
+power_compute("cox_regression", "post_hoc", hazard_ratio = 0.65,
+              events = 100, alpha = 0.05)
+```
+
+## A priori events
+
+```{r apriori}
+power_compute("cox_regression", "a_priori", hazard_ratio = 0.7,
+              alpha = 0.05, power = 0.8)
+```
+
+## Related
+
+- [Biomarker survival](biomarker-survival.html)
+- [Formula reference](formula-reference.html)

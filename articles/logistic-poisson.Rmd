@@ -1,0 +1,47 @@
+---
+title: "Logistic and Poisson Regression"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Logistic and Poisson Regression}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+GLM power for binary and count outcomes (Wald normal approximation).
+
+## Logistic regression
+
+$$z = \frac{\log(\text{OR})}{\text{SE}(\log(\text{OR}))}$$
+
+```{r logist}
+power_compute("z_logistic", "a_priori", odds_ratio = 1.5, p0 = 0.5,
+              alpha = 0.05, power = 0.95, total_n = 300,
+              r2_other = 0, x_variance = 1)
+```
+
+## Poisson regression
+
+```{r pois}
+power_compute("z_poisson", "a_priori", exp_beta1 = 1.3,
+              base_rate = 0.85, exposure = 1, alpha = 0.05,
+              power = 0.95, r2_other = 0, x_variance = 0.25)
+```
+
+## Clinical count endpoint
+
+Same kernel via clinical module wrapper:
+
+```{r clinical}
+power_compute("count_endpoint_poisson", "post_hoc", exp_beta1 = 1.3,
+              base_rate = 0.85, exposure = 1, alpha = 0.05, total_n = 200)
+```
+
+## Related
+
+- [Binary and count endpoints](pharma-binary-and-count-endpoints.html)
+- [Approximation catalog](approximation-catalog.html)

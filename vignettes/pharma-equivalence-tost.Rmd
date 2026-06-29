@@ -1,0 +1,38 @@
+---
+title: "Equivalence Trials (TOST)"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Equivalence Trials (TOST)}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+Two one-sided tests (TOST) for bioequivalence and similarity trials.
+
+## Formula
+
+$$\text{Power}_{\text{TOST}} \approx \text{Power}_{\text{upper}} \times \text{Power}_{\text{lower}}$$
+
+## Continuous equivalence
+
+```{r cont}
+power_compute("rct_equivalence_continuous", "a_priori", d = 0,
+              eq_margin = 0.2, alpha = 0.05, power = 0.8, n1 = 80, n2 = 80)
+```
+
+## Proportion equivalence
+
+```{r prop}
+power_compute("rct_equivalence_proportion", "post_hoc", p0 = 0.5, p1 = 0.52,
+              eq_margin = 0.1, alpha = 0.05, n1 = 150, n2 = 150)
+```
+
+## Related
+
+- [Non-inferiority](pharma-non-inferiority.html)
+- [Formula reference](formula-reference.html)

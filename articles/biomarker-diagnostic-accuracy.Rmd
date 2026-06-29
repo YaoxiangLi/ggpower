@@ -1,0 +1,38 @@
+---
+title: "Biomarker Diagnostic Accuracy"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Biomarker Diagnostic Accuracy}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+Power for validating sensitivity and specificity of a diagnostic classifier.
+
+## Formula
+
+Separate binomial tests; reported power is $\min(\text{Power}_{\text{sens}}, \text{Power}_{\text{spec}})$.
+
+## Post hoc
+
+```{r example}
+power_compute("diagnostic_acc", "post_hoc", sensitivity = 0.85, specificity = 0.85,
+              n_pos = 50, n_neg = 50, alpha = 0.05)
+```
+
+## A priori
+
+```{r apriori}
+power_compute("diagnostic_acc", "a_priori", sensitivity = 0.9, specificity = 0.9,
+              alpha = 0.05, power = 0.8, allocation_ratio = 1)
+```
+
+## Related
+
+- [ROC / AUC](biomarker-roc-auc.html)
+- [Formula reference](formula-reference.html)

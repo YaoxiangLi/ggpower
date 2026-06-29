@@ -1,0 +1,9 @@
+utils::globalVariables(c(
+  "density",
+  "distribution",
+  "n",
+  "n_per_group",
+  "power",
+  "total_n",
+  "x"
+))

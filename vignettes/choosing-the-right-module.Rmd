@@ -1,0 +1,75 @@
+---
+title: "Choosing the Right Module"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Choosing the Right Module}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+## In plain English
+
+Not every research question belongs in the same module. Use this guide to pick the
+sidebar entry that matches your endpoint and study design.
+
+## Decision guide
+
+```{r modules, echo=FALSE}
+data.frame(
+  Question = c(
+    "What sample size for a standard t test or ANOVA?",
+    "Can my biomarker discriminate cases from controls (AUC)?",
+    "Is my classifier sensitive and specific enough?",
+    "Does a biomarker predict survival?",
+    "How many patients for a Phase III superiority trial?",
+    "Is treatment non-inferior to standard of care?",
+    "Is a new formulation equivalent (bioequivalence)?",
+    "Oncology single-arm Phase II with early stopping?"
+  ),
+  Module = c(
+    "Power Workspace",
+    "Biomarker Discovery",
+    "Biomarker Discovery",
+    "Biomarker Discovery",
+    "Clinical Trials",
+    "Clinical Trials",
+    "Clinical Trials",
+    "Clinical Trials"
+  ),
+  Example_test = c(
+    "t_two_sample",
+    "roc_auc_one",
+    "diagnostic_acc",
+    "cox_regression",
+    "rct_superiority_continuous",
+    "rct_noninferiority_binary",
+    "rct_equivalence_continuous",
+    "simon_two_stage"
+  )
+)
+```
+
+## Filter tests by module
+
+```{r filter}
+ggpower_tests(module = "biomarker")[, c("id", "label")]
+```
+
+```{r filter2}
+ggpower_tests(module = "clinical")[, c("id", "label")]
+```
+
+## When NOT to switch modules
+
+Stay in **Power Workspace** when you need specialized classical tests (McNemar,
+tetrachoric correlation, Wilcoxon, etc.) even if the endpoint sounds clinical.
+
+## Related analyses
+
+- [Getting started with the GUI](getting-started-gui.html)
+- [Choosing a power analysis](choosing-a-power-analysis.html)

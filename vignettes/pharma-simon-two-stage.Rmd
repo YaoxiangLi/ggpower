@@ -1,0 +1,40 @@
+---
+title: "Simon Two-Stage Design"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Simon Two-Stage Design}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+Simon optimal two-stage design for single-arm Phase II oncology trials.
+
+## Formula
+
+Stage-wise binomial operating characteristics under $p_0$ (null) and $p_1$ (target).
+
+**Modes:** `post_hoc` and `sensitivity` only (no sample-size solver).
+
+## Post hoc power
+
+```{r example}
+power_compute("simon_two_stage", "post_hoc", p0 = 0.2, p1 = 0.4,
+              r1 = 4, r = 10, n1 = 20, n2 = 20, alpha = 0.05)
+```
+
+## Sensitivity — detectable response rate
+
+```{r sens}
+power_compute("simon_two_stage", "sensitivity", p0 = 0.2, r1 = 4, r = 10,
+              n1 = 20, n2 = 20, alpha = 0.05, power = 0.8)
+```
+
+## Related
+
+- [Scenario guide](scenario-guide.html) — design search not yet implemented
+- [Binary endpoints](pharma-binary-and-count-endpoints.html)

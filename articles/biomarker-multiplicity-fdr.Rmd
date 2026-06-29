@@ -1,0 +1,34 @@
+---
+title: "Multiplicity and FDR"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Multiplicity and FDR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+Screening power under Benjamini-Hochberg FDR control for omics panels.
+
+## Formula
+
+Independent two-sample $t$ tests with proportion $\pi_0$ true nulls; BH at level $q$.
+
+## Post hoc (recommended)
+
+```{r example}
+power_compute("discovery_fdr", "post_hoc", effect_d = 0.5, m_tests = 1000,
+              pi0 = 0.9, fdr_level = 0.05, n = 40, alpha = 0.05)
+```
+
+For `a_priori` and `sensitivity` modes, use smaller `m_tests` or higher `effect_d` — large
+panels may not reach target power within the solver search range.
+
+## Related
+
+- [Differential expression](biomarker-differential-expression.html)
+- [Approximation catalog](approximation-catalog.html)

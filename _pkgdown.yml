@@ -1,0 +1,92 @@
+url: https://yaoxiangli.github.io/ggpower/
+
+template:
+  bootstrap: 5
+  bootswatch: flatly
+  package: ggpower
+
+navbar:
+  structure:
+    left: [intro, reference, articles, news]
+    right: [search, github]
+
+reference:
+  - title: Compute API
+    contents:
+      - power_compute
+      - ggpower_tests
+      - ggpower_result
+      - format_result_html
+  - title: t-test Helpers
+    contents:
+      - power_t_one_sample
+      - power_t_two_sample
+      - power_t_paired
+      - ggpower_t_one_sample
+      - ggpower_ttest
+  - title: Effect Sizes
+    contents:
+      - effect_size_helpers
+  - title: Publication Figures
+    contents:
+      - theme_ggpower
+      - plot_power_curve
+      - plot_distribution
+      - save_power_plot
+  - title: Calculator
+    contents:
+      - ggpower_calculator
+  - title: App
+    contents:
+      - run_app
+
+articles:
+  - title: Getting Started
+    navbar: Getting Started
+    contents:
+      - "`choosing-a-power-analysis`"
+      - "`getting-started-gui`"
+      - "`choosing-the-right-module`"
+      - "`scenario-guide`"
+      - "`reference-validation`"
+  - title: Statistical Test Families
+    navbar: Test Families
+    contents:
+      - "`t-tests`"
+      - "`workspace-test-families`"
+      - "`anova-regression`"
+      - "`exact-and-proportions`"
+      - "`correlation-and-z-tests`"
+      - "`nonparametric-tests`"
+      - "`logistic-poisson`"
+  - title: Biomarker Discovery
+    navbar: Biomarker
+    contents:
+      - "`biomarker-endpoints`"
+      - "`biomarker-differential-expression`"
+      - "`biomarker-roc-auc`"
+      - "`biomarker-diagnostic-accuracy`"
+      - "`biomarker-survival`"
+      - "`biomarker-cox-prognostic`"
+      - "`biomarker-multiplicity-fdr`"
+  - title: Clinical Trials
+    navbar: Clinical Trials
+    contents:
+      - "`clinical-trials`"
+      - "`pharma-phase-iii-superiority`"
+      - "`pharma-non-inferiority`"
+      - "`pharma-equivalence-tost`"
+      - "`pharma-simon-two-stage`"
+      - "`pharma-cluster-rct`"
+      - "`pharma-survival-endpoints`"
+      - "`pharma-binary-and-count-endpoints`"
+  - title: Reference
+    navbar: Reference
+    contents:
+      - "`support-matrix`"
+      - "`analysis-modes`"
+      - "`formula-reference`"
+      - "`effect-size-conversions`"
+      - calculator
+      - "`approximation-catalog`"
+      - "`publication-figures`"

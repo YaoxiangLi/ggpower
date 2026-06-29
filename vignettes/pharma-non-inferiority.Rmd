@@ -1,0 +1,37 @@
+---
+title: "Non-Inferiority Trials"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Non-Inferiority Trials}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+Non-inferiority tests whether a new treatment is not worse than control by more
+than a pre-specified margin $\Delta$.
+
+## Continuous NI
+
+$$H_0: \mu_T - \mu_C \le -\Delta \quad \text{vs} \quad H_1: \mu_T - \mu_C > -\Delta$$
+
+```{r cont}
+power_compute("rct_noninferiority_continuous", "a_priori", d = 0.1,
+              ni_margin = 0.2, alpha = 0.025, power = 0.8, n1 = 100, n2 = 100)
+```
+
+## Binary NI (normal approximation)
+
+```{r binary}
+power_compute("rct_noninferiority_binary", "post_hoc", p0 = 0.5, p1 = 0.55,
+              ni_margin = 0.1, alpha = 0.025, n1 = 200, n2 = 200)
+```
+
+## Related
+
+- [Equivalence (TOST)](pharma-equivalence-tost.html)
+- [Formula reference](formula-reference.html)

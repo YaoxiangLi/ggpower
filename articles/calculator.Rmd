@@ -1,0 +1,51 @@
+---
+title: "Calculator"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Calculator}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+The **Calculator** module in `run_app()` evaluates distribution-function scripts.
+The same engine is available as `ggpower_calculator()`.
+
+## Basic arithmetic
+
+```{r arith}
+ggpower_calculator("2^3 + 1")
+```
+
+## Inverse normal
+
+```{r zinv}
+ggpower_calculator("zinv(0.975)")
+```
+
+## Noncentral t CDF
+
+```{r nct}
+ggpower_calculator("nctcdf(1.699127, 29, 3.423266)")
+```
+
+## Multi-line script
+
+```{r multi}
+ggpower_calculator("alpha <- 0.05
+nctcdf(1.699127, 29, 3.423266)")
+```
+
+## Available helpers
+
+Common functions: `zcdf`, `zinv`, `tcdf`, `tinv`, `fcdf`, `finv`, `chisqcdf`,
+`chisqinv`, `ncfcdf`, `nctcdf`, `binomcdf`, and assignment with `<-`.
+
+## Related
+
+- [Getting started with the GUI](getting-started-gui.html)
+- [Formula reference](formula-reference.html)

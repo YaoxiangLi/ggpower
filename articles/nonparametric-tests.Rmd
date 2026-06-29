@@ -1,0 +1,37 @@
+---
+title: "Nonparametric Tests"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Nonparametric Tests}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+Nonparametric tests use asymptotic relative efficiency (ARE) to map rank-test
+planning to equivalent t-test noncentrality:
+
+$$d_{\text{eff}} = d \cdot \sqrt{\text{ARE}}$$
+
+See [approximation catalog](approximation-catalog.html).
+
+## Wilcoxon Signed-Rank
+
+```{r}
+power_compute("wilcoxon_signed", "post_hoc", d = 0.5, n = 40,
+              alpha = 0.05, are = 3 / pi)
+```
+
+## Wilcoxon-Mann-Whitney
+
+```{r}
+power_compute("wilcoxon_mann_whitney", "post_hoc", d = 0.5,
+              n1 = 30, n2 = 30, alpha = 0.05, are = 3 / pi)
+```
+
+Use a smaller ARE for conservative planning and a larger ARE when the parent
+distribution makes the rank test more efficient than the t-test.

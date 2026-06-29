@@ -1,0 +1,108 @@
+---
+title: "Choosing a Power Analysis"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Choosing a Power Analysis}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+ggpower organizes power analysis around the question being asked.
+
+- Use **a priori** before data collection when sample size is unknown.
+- Use **post hoc** when sample size is fixed and achieved power is needed.
+- Use **criterion** when alpha should be selected to reach a target power.
+- Use **sensitivity** when the smallest detectable effect size is the target.
+- Use **compromise** when alpha and beta should be balanced with a chosen beta/alpha ratio.
+
+## Example: Planning a One-Sample Mean Test
+
+Suppose a clinical scale has a baseline mean of 10, the expected mean is 15,
+and the standard deviation is 8. The effect size is:
+
+```{r}
+d <- effect_size_d(mean_h1 = 15, mean_h0 = 10, sd = 8)
+d
+```
+
+For a one-tailed test with alpha = 0.05 and target power = 0.95:
+
+```{r}
+power_compute("t_one_sample", "a_priori", d = d, alpha = 0.05,
+              power = 0.95, tails = "one")
+```
+
+## Choosing tests
+
+Use `ggpower_tests()` to inspect supported families, domains, and modules.
+The package registers **48 tests** across workspace, biomarker, and clinical workflows.
+
+```{r}
+ggpower_tests()[, c("id", "family", "domain", "module")]
+```
+
+## Sidebar modules
+
+Not every research question belongs in the same module. Use this guide to pick the
+sidebar entry that matches your endpoint and study design.
+
+```{r modules, echo=FALSE}
+data.frame(
+  Question = c(
+    "What sample size for a standard t test or ANOVA?",
+    "Can my biomarker discriminate cases from controls (AUC)?",
+    "Is my classifier sensitive and specific enough?",
+    "Does a biomarker predict survival?",
+    "How many patients for a Phase III superiority trial?",
+    "Is treatment non-inferior to standard of care?",
+    "Is a new formulation equivalent (bioequivalence)?",
+    "Oncology single-arm Phase II with early stopping?"
+  ),
+  Module = c(
+    "Power Workspace",
+    "Biomarker Discovery",
+    "Biomarker Discovery",
+    "Biomarker Discovery",
+    "Clinical Trials",
+    "Clinical Trials",
+    "Clinical Trials",
+    "Clinical Trials"
+  ),
+  Example_test = c(
+    "t_two_sample",
+    "roc_auc_one",
+    "diagnostic_acc",
+    "cox_regression",
+    "rct_superiority_continuous",
+    "rct_noninferiority_binary",
+    "rct_equivalence_continuous",
+    "simon_two_stage"
+  )
+)
+```
+
+- **Power Workspace** — classical test families (t, F, chi-square, exact, z, nonparametric)
+- **Biomarker Discovery** — ROC, diagnostic, survival, FDR
+- **Clinical Trials** — superiority, NI, equivalence, Simon, cluster RCT
+
+```{r filter}
+ggpower_tests(module = "biomarker")[, c("id", "label")]
+```
+
+```{r filter2}
+ggpower_tests(module = "clinical")[, c("id", "label")]
+```
+
+Stay in **Power Workspace** when you need specialized classical tests (McNemar,
+tetrachoric correlation, Wilcoxon, etc.) even if the endpoint sounds clinical.
+
+## Related
+
+- [Getting started with the GUI](getting-started-gui.html)
+- [Scenario guide](scenario-guide.html)
+- [Support matrix](support-matrix.html)

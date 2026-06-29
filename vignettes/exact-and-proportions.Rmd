@@ -1,0 +1,60 @@
+---
+title: "Exact and Proportion Tests"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Exact and Proportion Tests}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+Exact and proportion tests for binary outcomes.
+
+## Generic binomial
+
+```{r binom}
+power_compute("exact_binomial", "post_hoc", p0 = 0.5, p1 = 0.65,
+              n = 80, alpha = 0.05, tails = "one")
+```
+
+## One proportion vs constant
+
+```{r oneprop}
+power_compute("exact_one_proportion", "a_priori", p0 = 0.5, p1 = 0.7,
+              alpha = 0.05, power = 0.8, tails = "two")
+```
+
+## Sign test
+
+```{r sign}
+power_compute("exact_sign", "post_hoc", p0 = 0.5, p1 = 0.65, n = 50, alpha = 0.05)
+```
+
+## Fisher exact (two proportions)
+
+```{r fisher}
+power_compute("exact_fisher", "post_hoc", p0 = 0.4, p1 = 0.7,
+              n1 = 12, n2 = 12, alpha = 0.05, tails = "greater")
+```
+
+## McNemar (approximation)
+
+```{r mcnemar}
+power_compute("exact_mcnemar", "post_hoc", p0 = 0.5, p1 = 0.65, n = 60, alpha = 0.05)
+```
+
+## Chi-square contingency (Cohen's w)
+
+```{r w}
+w <- effect_size_w(c(.25, .25, .25, .25), c(.35, .15, .30, .20))
+power_compute("chisq_contingency", "a_priori", w = w, alpha = 0.05, power = 0.8,
+              groups = 4)
+```
+
+## Related
+
+- [Approximation catalog](approximation-catalog.html)

@@ -1,0 +1,80 @@
+---
+title: "ANOVA and Regression"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ANOVA and Regression}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+F tests cover ANOVA effects and fixed-model multiple regression.
+
+## One-way ANOVA
+
+$$f = \sqrt{\eta^2/(1-\eta^2)}, \quad \lambda = f^2 N$$
+
+```{r anova}
+power_compute("f_anova_one_way", "a_priori", f = 0.25, alpha = 0.05,
+              power = 0.8, groups = 4)
+```
+
+## Factorial effects
+
+```{r special}
+power_compute("f_anova_special", "post_hoc", f = 0.2450722,
+              total_n = 108, df1 = 4, groups = 36)
+```
+
+## Multiple regression omnibus
+
+```{r mreg}
+f2 <- effect_size_f2(0.10)
+power_compute("f_mreg_omnibus", "post_hoc", f2 = f2,
+              total_n = 95, predictors = 5)
+```
+
+## Multiple regression $R^2$ increase
+
+```{r increase}
+f2 <- effect_size_f2_increase(r2_full = 0.15, r2_reduced = 0.05)
+power_compute("f_mreg_increase", "post_hoc", f2 = f2, total_n = 100,
+              predictors = 5, tested_predictors = 1)
+```
+
+## Two variances
+
+```{r var}
+power_compute("f_variance_two", "sensitivity", alpha = 0.05, power = 0.8,
+              n1 = 30, n2 = 30)
+```
+
+## Chi-square variance
+
+```{r chisqvar}
+power_compute("chisq_variance_one", "post_hoc", variance_ratio = 1.5,
+              n = 40, alpha = 0.05)
+```
+
+## Goodness of fit
+
+```{r gof}
+w <- effect_size_w(c(0.25, 0.25, 0.25, 0.25), c(0.35, 0.15, 0.30, 0.20))
+power_compute("chisq_gof", "a_priori", w = w, alpha = 0.05, power = 0.8,
+              groups = 4)
+```
+
+## Contingency table
+
+```{r cont}
+w <- effect_size_w(c(0.5, 0.5), c(0.6, 0.4))
+power_compute("chisq_contingency", "post_hoc", w = w, total_n = 100, groups = 2)
+```
+
+## Related
+
+- [Formula reference](formula-reference.html)

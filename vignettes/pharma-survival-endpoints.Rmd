@@ -1,0 +1,38 @@
+---
+title: "Survival Endpoints"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Survival Endpoints}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+Event-driven sample size for OS, PFS, and other time-to-event primary endpoints.
+
+## Formula
+
+Log-rank approximation — see [formula reference](formula-reference.html).
+
+## Clinical survival module
+
+```{r example}
+power_compute("survival_pmu", "a_priori", hazard_ratio = 0.65,
+              event_rate = 0.5, alpha = 0.05, power = 0.8)
+```
+
+## Post hoc
+
+```{r post}
+power_compute("survival_pmu", "post_hoc", hazard_ratio = 0.7,
+              total_n = 300, event_rate = 0.45, alpha = 0.05)
+```
+
+## Related
+
+- [Biomarker survival](biomarker-survival.html)
+- [Cox prognostic](biomarker-cox-prognostic.html)

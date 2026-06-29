@@ -1,0 +1,36 @@
+---
+title: "Cluster RCT"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Cluster RCT}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(ggpower)
+```
+
+Cluster-randomized trials with design effect from intraclass correlation.
+
+## Formula
+
+$$\text{DE} = 1 + (m - 1) \cdot \text{ICC}$$
+
+```{r example}
+power_compute("cluster_rct", "a_priori", d = 0.4, icc = 0.05,
+              cluster_size = 10, n_clusters = 20, alpha = 0.05, power = 0.8)
+```
+
+## Post hoc
+
+```{r post}
+power_compute("cluster_rct", "post_hoc", d = 0.35, icc = 0.05,
+              cluster_size = 12, n_clusters = 25, alpha = 0.05)
+```
+
+## Related
+
+- [Formula reference](formula-reference.html)
+- [Phase III superiority](pharma-phase-iii-superiority.html)
