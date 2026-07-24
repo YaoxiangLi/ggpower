@@ -10,13 +10,13 @@ Source:
 [`DESCRIPTION`](https://github.com/YaoxiangLi/ggpower/blob/main/DESCRIPTION)
 
 Li Y (2026). *ggpower: Publication-Ready Power Analysis and
-Visualization*. R package version 0.1.1,
+Visualization*. R package version 0.1.2,
 <https://github.com/YaoxiangLi/ggpower>.
 
     @Manual{,
       title = {ggpower: Publication-Ready Power Analysis and Visualization},
       author = {Yaoxiang Li},
       year = {2026},
-      note = {R package version 0.1.1},
+      note = {R package version 0.1.2},
       url = {https://github.com/YaoxiangLi/ggpower},
     }

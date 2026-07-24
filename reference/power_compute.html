@@ -9,7 +9,7 @@ supports classical test families and analysis modes."></head><body>
 
     <a class="navbar-brand me-2" href="../index.html">ggpower</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -108,7 +108,11 @@ supports classical test families and analysis modes.</p>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A <code>ggpower_result</code> object.</p>
+    <p>A <code>ggpower_result</code> list with components <code>test</code>, <code>analysis</code>,
+<code>inputs</code>, <code>outputs</code>, and optional <code>notes</code> and <code>distribution</code>.
+The <code>outputs</code> element contains the solved quantities (for example sample
+size, power, or effect size depending on the analysis mode). See
+<code><a href="ggpower_result.html">ggpower_result</a></code>.</p>
     </div>
 
     <div class="section level2">
@@ -148,7 +152,7 @@ supports classical test families and analysis modes.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
     </footer></div>

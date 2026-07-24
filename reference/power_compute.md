@@ -28,7 +28,11 @@ power_compute(test, analysis = "post_hoc", ...)
 
 ## Value
 
-A `ggpower_result` object.
+A `ggpower_result` list with components `test`, `analysis`, `inputs`,
+`outputs`, and optional `notes` and `distribution`. The `outputs`
+element contains the solved quantities (for example sample size, power,
+or effect size depending on the analysis mode). See
+[`ggpower_result`](https://yaoxiangli.github.io/ggpower/reference/ggpower_result.md).
 
 ## Examples
 

@@ -50,3 +50,9 @@ run_app(
 
   arguments to pass to golem_opts. See \`?golem::get_golem_options\` for
   more details.
+
+## Value
+
+A Shiny application object (class \`"shiny.appobj"\`). Launch the GUI
+with \`shiny::runApp(run_app())\` or from the development helper
+described in the package overview.

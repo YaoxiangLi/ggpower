@@ -1,5 +1,20 @@
 # Changelog
 
+## ggpower 0.1.2
+
+CRAN release: 2026-07-10
+
+### CRAN resubmission
+
+- DESCRIPTION: removed quotes around
+  [`power_compute()`](https://yaoxiangli.github.io/ggpower/reference/power_compute.md).
+- Added `\value` to
+  [`run_app()`](https://yaoxiangli.github.io/ggpower/reference/run_app.md)
+  documentation.
+- Expanded
+  [`power_compute()`](https://yaoxiangli.github.io/ggpower/reference/power_compute.md)
+  return-value documentation.
+
 ## ggpower 0.1.1
 
 ### CRAN resubmission
