@@ -5,7 +5,10 @@
 #'   or `sensitivity`.
 #' @param ... Test-specific inputs.
 #'
-#' @return A `ggpower_result` object.
+#' @return A `ggpower_result` list with components `test`, `analysis`,
+#'   `inputs`, `outputs`, and optional `notes` and `distribution`. The
+#'   `outputs` element contains the solved quantities (for example sample size,
+#'   power, or effect size depending on the analysis mode). See [ggpower_result].
 #' @export
 power_compute <- function(test, analysis = "post_hoc", ...) {
   spec <- ggpower_get_test(test)

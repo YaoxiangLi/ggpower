@@ -4,6 +4,9 @@
 #' See `?golem::get_golem_options` for more details.
 #' @inheritParams shiny::shinyApp
 #'
+#' @return A Shiny application object (class `"shiny.appobj"`). Launch the GUI
+#'   with `shiny::runApp(run_app())` or from the development helper described
+#'   in the package overview.
 #' @export
 #' @importFrom shiny shinyApp
 #' @importFrom golem with_golem_options

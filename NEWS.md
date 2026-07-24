@@ -1,3 +1,11 @@
+# ggpower 0.1.2
+
+## CRAN resubmission
+
+- DESCRIPTION: removed quotes around `power_compute()`.
+- Added `\value` to `run_app()` documentation.
+- Expanded `power_compute()` return-value documentation.
+
 # ggpower 0.1.1
 
 ## CRAN resubmission

@@ -1,12 +1,18 @@
 ## Resubmission
 
-This is a resubmission of ggpower 0.1.1 (initial 0.1.0 upload was not accepted).
+This is a resubmission of ggpower 0.1.2 (0.1.1 was not accepted).
 
-## Fixes since initial submission
+## Fixes since 0.1.1
 
-* Quoted software names in DESCRIPTION ('ggplot2', 'Shiny').
-* Replaced invalid relative vignette links to pkgdown-only articles in
-  `reference-validation.Rmd` with full https:// URLs.
+* Removed single quotes around power_compute() in DESCRIPTION (per Konstanze Lauseker).
+* Added `\value` documentation to `run_app.Rd`.
+* Expanded the `power_compute()` return-value description in `power_compute.Rd`.
+
+## References in DESCRIPTION
+
+Standard power-analysis formulas are documented in the package vignettes and
+on the pkgdown formula reference page; no single monograph is cited in
+DESCRIPTION.
 
 ## Test environments
 
@@ -16,4 +22,4 @@ This is a resubmission of ggpower 0.1.1 (initial 0.1.0 upload was not accepted).
 
 ## Downstream dependencies
 
-* None at first release.
+* None.

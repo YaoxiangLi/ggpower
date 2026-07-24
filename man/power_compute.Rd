@@ -10,7 +10,11 @@ power_compute(test, analysis = "post_hoc", ...)
 \item{...}{Test-specific input parameters.}
 }
 \value{
-A \code{ggpower_result} object.
+A \code{ggpower_result} list with components \code{test}, \code{analysis},
+\code{inputs}, \code{outputs}, and optional \code{notes} and \code{distribution}.
+The \code{outputs} element contains the solved quantities (for example sample
+size, power, or effect size depending on the analysis mode). See
+\code{\link{ggpower_result}}.
 }
 \description{
 Runs a power analysis using the shared ggpower compute engine. The function
