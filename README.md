@@ -65,6 +65,7 @@ power_compute(
 Run the app with:
 
 ```r
+install.packages(c("bs4Dash", "config", "golem"))
 ggpower::run_app()
 ```
 

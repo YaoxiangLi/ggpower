@@ -13,7 +13,7 @@ power_t_one_sample(d, n, alpha = 0.05, tails = "two")
 
 \item{alpha}{Numeric. The significance level (default is 0.05).}
 
-\item{tails}{Character. \code{"two"} for a two-tailed test or \code{"one"} for a one-tailed test.}
+\item{tails}{Character. `"two"` for a two-tailed test or `"one"` for a one-tailed test.}
 }
 \value{
 Numeric. The computed power (1 - beta).

@@ -4,8 +4,7 @@
 \alias{ggpower_ttest}
 \title{Plot Power Curve for a Two-Sample t-Test}
 \usage{
-ggpower_ttest(d, alpha = 0.05, n_range = seq(10, 100, by = 5),
-  tails = "two")
+ggpower_ttest(d, alpha = 0.05, n_range = seq(10, 100, by = 5), tails = "two")
 }
 \arguments{
 \item{d}{Numeric. The effect size (Cohen's d).}
@@ -14,7 +13,7 @@ ggpower_ttest(d, alpha = 0.05, n_range = seq(10, 100, by = 5),
 
 \item{n_range}{Numeric vector. A vector of sample sizes per group (default is seq(10, 100, by = 5)).}
 
-\item{tails}{Character. \code{"two"} or \code{"one"}.}
+\item{tails}{Character. `"two"` or `"one"`.}
 }
 \value{
 A ggplot object showing the power curve.

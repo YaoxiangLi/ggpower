@@ -1,3 +1,14 @@
+# ggpower 0.1.3
+
+## Reliability and installation
+
+- Moved GUI-only `bs4Dash`, `config`, and `golem` dependencies to Suggests so
+  the scriptable power-analysis API has a smaller installation footprint.
+- Added a clear dependency check before launching the optional application.
+- Registered the `format.ggpower_result()` S3 method and completed
+  effect-size helper documentation.
+- Added permanent R-devel checks to the cross-platform CI matrix.
+
 # ggpower 0.1.2
 
 ## CRAN resubmission

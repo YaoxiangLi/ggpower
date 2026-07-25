@@ -7,19 +7,15 @@
 ggpower_tests(domain = NULL, module = NULL)
 }
 \arguments{
-\item{domain}{Optional character vector to filter by domain (\code{general},
-\code{biomarker}, \code{pharma}).}
+\item{domain}{Optional character vector to filter by domain (`general`,
+`biomarker`, `pharma`).}
 
-\item{module}{Optional character vector to filter by app module (\code{workspace},
-\code{biomarker}, \code{clinical}).}
+\item{module}{Optional character vector to filter by app module (`workspace`,
+`biomarker`, `clinical`).}
 }
 \value{
-A data frame describing tests available to \code{power_compute()}.
+A data frame describing tests available to `power_compute()`.
 }
 \description{
-Lists the tests available to \code{power_compute()}.
-}
-\examples{
-ggpower_tests()
-ggpower_tests(module = "biomarker")
+List supported statistical power tests
 }

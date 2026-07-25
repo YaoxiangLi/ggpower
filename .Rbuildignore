@@ -13,6 +13,7 @@ $run_dev.*
 ^cran-comments\.md$
 ^_pkgdown\.yml$
 ^ggpower_.*\.tar\.gz$
+^.*\.Rcheck$
 ^vignettes/anova-regression\.Rmd$
 ^vignettes/approximation-catalog\.Rmd$
 ^vignettes/biomarker-cox-prognostic\.Rmd$

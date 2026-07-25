@@ -50,8 +50,9 @@ print.ggpower_result <- function(x, ...) {
   invisible(x)
 }
 
+#' @export
 format.ggpower_result <- function(x, ...) {
-  capture.output(print(x))
+  utils::capture.output(print(x))
 }
 
 .format_named_values <- function(values) {

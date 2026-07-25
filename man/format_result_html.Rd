@@ -7,11 +7,11 @@
 format_result_html(x)
 }
 \arguments{
-\item{x}{A \code{ggpower_result} object.}
+\item{x}{A `ggpower_result` object.}
 }
 \value{
-A \code{shiny.tag} list suitable for \code{renderUI}.
+A `shiny.tag` list for `renderUI`.
 }
 \description{
-Renders metric cards, input/output blocks, and notes for the Shiny app.
+Format a ggpower result as structured HTML for Shiny UI
 }

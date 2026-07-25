@@ -13,7 +13,7 @@ power_t_two_sample(d, n_per_group, alpha = 0.05, tails = "two", n2 = NULL)
 
 \item{alpha}{Numeric. The significance level (default is 0.05).}
 
-\item{tails}{Character. \code{"two"} for a two-tailed test or \code{"one"} for a one-tailed test.}
+\item{tails}{Character. `"two"` for a two-tailed test or `"one"` for a one-tailed test.}
 
 \item{n2}{Optional second-group sample size. If omitted, equal group sizes are used.}
 }

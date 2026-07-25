@@ -4,8 +4,12 @@
 \alias{ggpower_t_one_sample}
 \title{Plot Power Curve for a One-Sample t-Test}
 \usage{
-ggpower_t_one_sample(d, alpha = 0.05, n_range = seq(20, 100, by = 5),
-  tails = "two")
+ggpower_t_one_sample(
+  d,
+  alpha = 0.05,
+  n_range = seq(20, 100, by = 5),
+  tails = "two"
+)
 }
 \arguments{
 \item{d}{Numeric. The effect size (d).}
@@ -14,7 +18,7 @@ ggpower_t_one_sample(d, alpha = 0.05, n_range = seq(20, 100, by = 5),
 
 \item{n_range}{Numeric vector. A vector of total sample sizes (default is seq(20, 100, by = 5)).}
 
-\item{tails}{Character. \code{"two"} or \code{"one"}.}
+\item{tails}{Character. `"two"` or `"one"`.}
 }
 \value{
 A ggplot object showing the power curve.

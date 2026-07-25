@@ -3,7 +3,6 @@
 #' @param request Internal parameter for `{shiny}`.
 #'     DO NOT REMOVE.
 #' @importFrom shiny tagList icon tags
-#' @importFrom bs4Dash bs4DashPage bs4DashNavbar bs4DashSidebar bs4DashBody bs4TabItems bs4TabItem bs4DashControlbar bs4DashFooter sidebarMenu menuItem
 #' @noRd
 app_ui <- function(request) {
   tagList(
@@ -29,14 +28,14 @@ app_ui <- function(request) {
         expandOnHover = FALSE,
         fixed = TRUE,
         title = gp_brand_ui(compact = TRUE, grad_id = "gpLogoSide"),
-        sidebarMenu(
+        bs4Dash::sidebarMenu(
           id = "sidebar_menu",
-          menuItem("Power Workspace", tabName = "workspace", icon = icon("chart-line")),
-          menuItem("Biomarker Discovery", tabName = "biomarker", icon = icon("dna")),
-          menuItem("Clinical Trials", tabName = "clinical", icon = icon("pills")),
-          menuItem("Calculator", tabName = "calculator", icon = icon("calculator")),
-          menuItem("Protocol", tabName = "protocol", icon = icon("clipboard-list")),
-          menuItem("Help", tabName = "help", icon = icon("book-open"))
+          bs4Dash::menuItem("Power Workspace", tabName = "workspace", icon = icon("chart-line")),
+          bs4Dash::menuItem("Biomarker Discovery", tabName = "biomarker", icon = icon("dna")),
+          bs4Dash::menuItem("Clinical Trials", tabName = "clinical", icon = icon("pills")),
+          bs4Dash::menuItem("Calculator", tabName = "calculator", icon = icon("calculator")),
+          bs4Dash::menuItem("Protocol", tabName = "protocol", icon = icon("clipboard-list")),
+          bs4Dash::menuItem("Help", tabName = "help", icon = icon("book-open"))
         )
       ),
       body = bs4Dash::bs4DashBody(
@@ -67,17 +66,16 @@ app_ui <- function(request) {
 #' resources inside the Shiny application.
 #'
 #' @import shiny
-#' @importFrom golem add_resource_path activate_js favicon bundle_resources
 #' @noRd
 golem_add_external_resources <- function() {
-  add_resource_path(
+  golem::add_resource_path(
     "www",
     app_sys("app/www")
   )
 
   tags$head(
-    favicon(),
-    bundle_resources(
+    golem::favicon(),
+    golem::bundle_resources(
       path = app_sys("app/www"),
       app_title = "ggpower"
     ),
