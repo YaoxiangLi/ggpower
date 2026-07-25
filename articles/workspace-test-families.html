@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">ggpower</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.3</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -141,7 +141,7 @@ Tests</a> for the t-test family.</p>
 <span><span class="co">#&gt; Notes</span></span>
 <span><span class="co">#&gt; - A priori sample sizes are rounded up to integer values and actual power is recomputed.</span></span></code></pre></div>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">f2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/effect_size_helpers.html">effect_size_f2</a></span><span class="op">(</span><span class="fl">0.10</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">f2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/effect_size_f2.html">effect_size_f2</a></span><span class="op">(</span><span class="fl">0.10</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/power_compute.html">power_compute</a></span><span class="op">(</span><span class="st">"f_mreg_omnibus"</span>, <span class="st">"post_hoc"</span>, f2 <span class="op">=</span> <span class="va">f2</span>,</span>
 <span>              total_n <span class="op">=</span> <span class="fl">95</span>, predictors <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
 <span><span class="co">#&gt; ggpower result</span></span>
@@ -235,7 +235,7 @@ Tests</a> for the t-test family.</p>
 <h2 id="correlation-and-z-tests">Correlation and z tests<a class="anchor" aria-label="anchor" href="#correlation-and-z-tests"></a>
 </h2>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">q</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/effect_size_helpers.html">effect_size_q</a></span><span class="op">(</span><span class="fl">0.75</span>, <span class="fl">0.88</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">q</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/effect_size_q.html">effect_size_q</a></span><span class="op">(</span><span class="fl">0.75</span>, <span class="fl">0.88</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/power_compute.html">power_compute</a></span><span class="op">(</span><span class="st">"z_corr_independent"</span>, <span class="st">"post_hoc"</span>, q_effect <span class="op">=</span> <span class="va">q</span>,</span>
 <span>              n1 <span class="op">=</span> <span class="fl">51</span>, n2 <span class="op">=</span> <span class="fl">260</span>, alpha <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span></span>
 <span><span class="co">#&gt; ggpower result</span></span>

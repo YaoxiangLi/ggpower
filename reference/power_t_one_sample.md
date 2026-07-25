@@ -26,8 +26,8 @@ power_t_one_sample(d, n, alpha = 0.05, tails = "two")
 
 - tails:
 
-  Character. `"two"` for a two-tailed test or `"one"` for a one-tailed
-  test.
+  Character. \`"two"\` for a two-tailed test or \`"one"\` for a
+  one-tailed test.
 
 ## Value
 

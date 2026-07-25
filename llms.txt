@@ -73,6 +73,7 @@ Run the app with:
 
 ``` r
 
+install.packages(c("bs4Dash", "config", "golem"))
 ggpower::run_app()
 ```
 
@@ -109,17 +110,26 @@ five analysis modes, registry checks, and Shiny module smoke tests.
 
 ## Effect Sizes
 
-- [`effect_size_d()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
-  [`effect_size_f()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
-  [`effect_size_f2()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
-  [`effect_size_f2_increase()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
-  [`effect_size_h()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
-  [`effect_size_q()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
-  [`effect_size_w()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
-  [`eta2_from_f()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
-  [`odds_ratio_from_probs()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
-  [`r2_from_f2()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_helpers.md)
-  : Effect-size helper functions
+- [`effect_size_d()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_d.md)
+  : Compute Cohen's d from means and standard deviation
+- [`effect_size_f()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_f.md)
+  : Compute Cohen's f from eta-squared
+- [`effect_size_f2()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_f2.md)
+  : Compute Cohen's f2 from R-squared
+- [`effect_size_f2_increase()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_f2_increase.md)
+  : Compute f2 for an R-squared increase
+- [`effect_size_h()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_h.md)
+  : Compute Cohen's h for two proportions
+- [`effect_size_q()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_q.md)
+  : Compute Cohen's q for two correlations
+- [`effect_size_w()`](https://yaoxiangli.github.io/ggpower/reference/effect_size_w.md)
+  : Compute chi-square effect size w
+- [`eta2_from_f()`](https://yaoxiangli.github.io/ggpower/reference/eta2_from_f.md)
+  : Convert Cohen's f to eta-squared
+- [`odds_ratio_from_probs()`](https://yaoxiangli.github.io/ggpower/reference/odds_ratio_from_probs.md)
+  : Compute odds ratio from two probabilities
+- [`r2_from_f2()`](https://yaoxiangli.github.io/ggpower/reference/r2_from_f2.md)
+  : Convert f2 to R-squared
 
 ## Publication Figures
 

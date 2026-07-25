@@ -5,8 +5,12 @@ This function creates a ggplot2 power curve for a one-sample t test.
 ## Usage
 
 ``` r
-ggpower_t_one_sample(d, alpha = 0.05, n_range = seq(20, 100, by = 5),
-  tails = "two")
+ggpower_t_one_sample(
+  d,
+  alpha = 0.05,
+  n_range = seq(20, 100, by = 5),
+  tails = "two"
+)
 ```
 
 ## Arguments
@@ -26,7 +30,7 @@ ggpower_t_one_sample(d, alpha = 0.05, n_range = seq(20, 100, by = 5),
 
 - tails:
 
-  Character. `"two"` or `"one"`.
+  Character. \`"two"\` or \`"one"\`.
 
 ## Value
 

@@ -5,8 +5,7 @@ This function creates a ggplot2 power curve for a two-sample t test.
 ## Usage
 
 ``` r
-ggpower_ttest(d, alpha = 0.05, n_range = seq(10, 100, by = 5),
-  tails = "two")
+ggpower_ttest(d, alpha = 0.05, n_range = seq(10, 100, by = 5), tails = "two")
 ```
 
 ## Arguments
@@ -26,7 +25,7 @@ ggpower_ttest(d, alpha = 0.05, n_range = seq(10, 100, by = 5),
 
 - tails:
 
-  Character. `"two"` or `"one"`.
+  Character. \`"two"\` or \`"one"\`.
 
 ## Value
 

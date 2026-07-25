@@ -1,6 +1,6 @@
 # Format a ggpower result as structured HTML for Shiny UI
 
-Renders metric cards, input/output blocks, and notes for the Shiny app.
+Format a ggpower result as structured HTML for Shiny UI
 
 ## Usage
 
@@ -12,8 +12,8 @@ format_result_html(x)
 
 - x:
 
-  A `ggpower_result` object.
+  A \`ggpower_result\` object.
 
 ## Value
 
-A `shiny.tag` list suitable for `renderUI`.
+A \`shiny.tag\` list for \`renderUI\`.

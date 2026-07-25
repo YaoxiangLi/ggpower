@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">ggpower</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.3</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -127,7 +127,7 @@ balanced with a chosen beta/alpha ratio.</li>
 <p>Suppose a clinical scale has a baseline mean of 10, the expected mean
 is 15, and the standard deviation is 8. The effect size is:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/effect_size_helpers.html">effect_size_d</a></span><span class="op">(</span>mean_h1 <span class="op">=</span> <span class="fl">15</span>, mean_h0 <span class="op">=</span> <span class="fl">10</span>, sd <span class="op">=</span> <span class="fl">8</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/effect_size_d.html">effect_size_d</a></span><span class="op">(</span>mean_h1 <span class="op">=</span> <span class="fl">15</span>, mean_h0 <span class="op">=</span> <span class="fl">10</span>, sd <span class="op">=</span> <span class="fl">8</span><span class="op">)</span></span>
 <span><span class="va">d</span></span>
 <span><span class="co">#&gt; [1] 0.625</span></span></code></pre></div>
 <p>For a one-tailed test with alpha = 0.05 and target power = 0.95:</p>
