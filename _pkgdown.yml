@@ -26,7 +26,16 @@ reference:
       - ggpower_ttest
   - title: Effect Sizes
     contents:
-      - effect_size_helpers
+      - effect_size_d
+      - effect_size_f
+      - effect_size_f2
+      - effect_size_f2_increase
+      - effect_size_h
+      - effect_size_q
+      - effect_size_w
+      - eta2_from_f
+      - odds_ratio_from_probs
+      - r2_from_f2
   - title: Publication Figures
     contents:
       - theme_ggpower
