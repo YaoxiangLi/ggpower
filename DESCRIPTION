@@ -23,7 +23,6 @@ Suggests:
     config,
     golem,
     knitr,
-    pkgdown,
     rmarkdown,
     spelling,
     testthat (>= 3.0.0)
